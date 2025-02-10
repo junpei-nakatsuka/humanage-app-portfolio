@@ -1,0 +1,32 @@
+tests/
+test/
+coverage/
+junit-reports/
+.pytest_cache/
+.idea/  # IntelliJ IDEA
+.vscode/  # Visual Studio Code
+.metadata/  # Eclipseのメタデータ
+.settings/  # Eclipseの設定
+.classpath  # Eclipseのクラスパス
+.project  # Eclipseのプロジェクト設定
+*.launch  # Eclipseの起動設定ファイル
+target/
+!target/Humanage_app-0.0.1-SNAPSHOT.war
+build/   # ビルド出力ディレクトリ
+dist/    # 配布用ディレクトリ
+tmp/
+node_modules/
+logs/
+*.log
+*.swp  # Vim一時ファイル
+*.swo
+.cache/
+.DS_Store  # macOSのメタデータ
+Thumbs.db  # Windowsのサムネイルキャッシュ
+docs/
+*.md  # マークダウンファイル（ドキュメント）
+README.txt
+LICENSE
+CHANGELOG.md
+.git/  # Gitの管理ファイル
+.env  # 環境変数ファイル

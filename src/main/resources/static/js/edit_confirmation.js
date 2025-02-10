@@ -1,0 +1,1 @@
+function showPasswordPrompt(){var t=document.getElementById("passwordField"),e=document.getElementById("submitButton"),l=document.getElementById("confirmButton");t.style.display="block",e.style.display="none",l.style.display="block"}function validateForm(){return""!==document.getElementById("password").value||(alert("パスワードを入力してください。"),!1)}

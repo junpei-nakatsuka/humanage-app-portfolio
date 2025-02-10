@@ -1,0 +1,6 @@
+build:
+  docker:
+    web: Dockerfile # Dockerfileを指定する
+
+run:
+  web: /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

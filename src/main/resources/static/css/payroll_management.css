@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.navigation{
+	display: flex;
+	justify-content: space-between;
+}
+.navigation-in{
+	width: 80px;
+}
+.navigation button {
+    padding: 4px 0px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.navigation button:hover {
+    background-color: #45a049;
+}
+table {
+	font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout:auto;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+th {
+    background-color: #f2f2f2;
+}
+.actions {
+    text-align: center;
+}
+.actions button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.actions button.view {
+    background-color: #2196F3;
+}
+.actions button:hover {
+    opacity: 0.8;
+}
+.actions button.edit {
+    background-color: #FF9800;
+}
+.actions button.edit:hover {
+    background-color: #FB8C00;
+}
+.form-group{
+	margin-bottom: 20px;
+}
+label{
+	display:block;
+	margin-bottom:8px;
+	color: #555;
+}
+input[type="number"],
+button{
+	width:100%;
+	padding:10px;
+	border:1px solid #ddd;
+	border-radius:4px;
+	font-size:14px;
+}
+button{
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+	margin-top: 10px;
+	border:none;
+}
+button:hover{
+	opacity:0.9;
+}
+.btn-back{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    text-decoration:none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.container{
+	position: relative;
+	padding-top: 20px;
+}
+.btn-back:hover{
+    background-color: #d32f2f;
+}
+table input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+.overtime-input {
+	font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.overtime-field {
+    width: 30px;
+    margin-right: 2px;
+}
+.wide-input {
+    width: 120px;
+}
+table .overtime-input .overtime-field {
+    width: 56px !important;
+    margin-right: 2px;
+}
+th.name, td.name {
+    width: 70px;
+}
+th.total-salary, td.total-salary {
+    width: 70px;
+}
+th.time-class, td.time-class{
+	min-width: 160px ;
+	width:auto;
+}
+.btn-search{
+	all: unset;
+	background-color: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 0px 8px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn-search :hover{
+	background-color: #e0e0e0;
+}
+.add-salary-out{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.add-salary {
+	width: 138px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.add-salary button {
+    padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.add-salary button:hover {
+	opacity: 0.8;
+}
+@media print{
+	.print-instruction{
+		display:none;
+	}
+}
+.btn-copy{
+	all: unset;
+	background-color: #007bff;
+    color:white;
+    border: 1px solid #ccc;
+    padding: 0px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+	height: 40px;
+	margin-top: 35px;
+	cursor: pointer;
+}
+#hannei{
+	margin-top: 34px;
+	background-color: #007bff;
+}
+.error-message{
+	text-align: center;
+	color: red;
+}
+#basicSalary,
+#allowances{
+	display:block;
+	margin: 0 auto;
+	width: 98%;
+}
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
