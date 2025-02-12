@@ -1,0 +1,2172 @@
+2025-02-10T14:45:30.972033+00:00 app[web.1]: Hibernate:
+2025-02-10T14:45:30.972034+00:00 app[web.1]: select
+2025-02-10T14:45:30.972034+00:00 app[web.1]: s1_0.id,
+2025-02-10T14:45:30.972035+00:00 app[web.1]: s1_0.allowances,
+2025-02-10T14:45:30.972036+00:00 app[web.1]: s1_0.basic_salary,
+2025-02-10T14:45:30.972036+00:00 app[web.1]: s1_0.deductions,
+2025-02-10T14:45:30.972036+00:00 app[web.1]: s1_0.employment_insurance,
+2025-02-10T14:45:30.972037+00:00 app[web.1]: s1_0.health_insurance,
+2025-02-10T14:45:30.972037+00:00 app[web.1]: s1_0.overtime_hours,
+2025-02-10T14:45:30.972037+00:00 app[web.1]: s1_0.overtime_minutes,
+2025-02-10T14:45:30.972037+00:00 app[web.1]: s1_0.overtime_pay,
+2025-02-10T14:45:30.972038+00:00 app[web.1]: s1_0.payment_date,
+2025-02-10T14:45:30.972038+00:00 app[web.1]: s1_0.payment_month,
+2025-02-10T14:45:30.972038+00:00 app[web.1]: s1_0.pension,
+2025-02-10T14:45:30.972038+00:00 app[web.1]: s1_0.total_salary,
+2025-02-10T14:45:30.972038+00:00 app[web.1]: s1_0.user_id
+2025-02-10T14:45:30.972039+00:00 app[web.1]: from
+2025-02-10T14:45:30.972039+00:00 app[web.1]: salaries s1_0
+2025-02-10T14:45:30.972039+00:00 app[web.1]: where
+2025-02-10T14:45:30.972039+00:00 app[web.1]: s1_0.user_id=?
+2025-02-10T14:45:30.972039+00:00 app[web.1]: and s1_0.payment_month=?
+2025-02-10T14:45:30.972039+00:00 app[web.1]: 
+2025-02-10T14:45:31.124531+00:00 app[web.1]: 2025-02-10 23:45:31,124 DEBG 'web' stdout output:
+2025-02-10T14:45:31.124547+00:00 app[web.1]: 2025-02-10T23:45:31.124+09:00  WARN 6 --- [Humanage_app] [           main] jp.co.example.service.SalaryService      : [WARN] 給与情報が見つかりませんでした。新しいSalaryオブジェクトを作成して返します。月: 2025-02
+2025-02-10T14:45:31.124547+00:00 app[web.1]: 
+2025-02-10T14:45:31.124640+00:00 app[web.1]: 2025-02-10 23:45:31,124 DEBG 'web' stdout output:
+2025-02-10T14:45:31.124640+00:00 app[web.1]: 2025-02-10T23:45:31.124+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.service.SalaryService      : [INFO] 給与はすでに計算されています。再計算をスキップします。既存の給与: Salary{username='null', paymentMonth=null, basicSalary=0, overtimePay=0, totalSalary=0}
+2025-02-10T14:45:31.124641+00:00 app[web.1]: 2025-02-10T23:45:31.124+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.service.SalaryService      : [INFO] 全ユーザーの残業時間が正常に反映されました。
+2025-02-10T14:45:31.124641+00:00 app[web.1]: 2025-02-10T23:45:31.124+09:00  INFO 6 --- [Humanage_app] [           main] j.c.example.listeners.OvertimeReflector  : [INFO] SalaryService.reflectOvertimeが完了しOvertimeReflector.javaに戻ってきました。残業時間が反映されました
+2025-02-10T14:45:31.124642+00:00 app[web.1]: 
+2025-02-10T14:45:31.278684+00:00 app[web.1]: 2025-02-10 23:45:31,278 DEBG 'web' stdout output:
+2025-02-10T14:45:31.278687+00:00 app[web.1]: 2025-02-10T23:45:31.278+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.HumanageAppApplication     : Started HumanageAppApplication in 23.686 seconds (process running for 24.736)
+2025-02-10T14:45:31.278687+00:00 app[web.1]: 
+2025-02-10T14:45:31.280349+00:00 app[web.1]: 2025-02-10 23:45:31,280 DEBG 'web' stdout output:
+2025-02-10T14:45:31.280351+00:00 app[web.1]: 2025-02-10T23:45:31.280+09:00 DEBUG 6 --- [Humanage_app] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2025-02-10T14:45:31.280352+00:00 app[web.1]: 
+2025-02-10T14:45:31.283013+00:00 app[web.1]: 2025-02-10 23:45:31,282 DEBG 'web' stdout output:
+2025-02-10T14:45:31.283017+00:00 app[web.1]: 2025-02-10T23:45:31.282+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.config.CacheInitializer    : [INFO] CacheInitializerが呼ばれました
+2025-02-10T14:45:31.283017+00:00 app[web.1]: 
+2025-02-10T14:45:31.283019+00:00 app[web.1]: 2025-02-10 23:45:31,282 DEBG 'web' stdout output:
+2025-02-10T14:45:31.283019+00:00 app[web.1]: 2025-02-10T23:45:31.282+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.config.CacheInitializer    : [INFO] attendanceCache キャッシュをクリアしています...
+2025-02-10T14:45:31.283020+00:00 app[web.1]: 
+2025-02-10T14:45:31.354833+00:00 app[web.1]: 2025-02-10 23:45:31,354 DEBG 'web' stdout output:
+2025-02-10T14:45:31.354835+00:00 app[web.1]: 2025-02-10T23:45:31.354+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.config.CacheInitializer    : [INFO] attendanceCache キャッシュをクリアしました。
+2025-02-10T14:45:31.354835+00:00 app[web.1]: 
+2025-02-10T14:45:31.354964+00:00 app[web.1]: 2025-02-10 23:45:31,354 DEBG 'web' stdout output:
+2025-02-10T14:45:31.354965+00:00 app[web.1]: 2025-02-10T23:45:31.354+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.config.CacheInitializer    : [INFO] salaryCache キャッシュをクリアしています...
+2025-02-10T14:45:31.354965+00:00 app[web.1]: 
+2025-02-10T14:45:31.357244+00:00 app[web.1]: 2025-02-10 23:45:31,357 DEBG 'web' stdout output:
+2025-02-10T14:45:31.357245+00:00 app[web.1]: 2025-02-10T23:45:31.356+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.config.CacheInitializer    : [INFO] salaryCache キャッシュをクリアしました。
+2025-02-10T14:45:31.357245+00:00 app[web.1]: 
+2025-02-10T14:45:31.358491+00:00 app[web.1]: 2025-02-10 23:45:31,358 DEBG 'web' stdout output:
+2025-02-10T14:45:31.358492+00:00 app[web.1]: 2025-02-10T23:45:31.357+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.config.CacheInitializer    : [INFO] userCache キャッシュをクリアしています...
+2025-02-10T14:45:31.358493+00:00 app[web.1]: 
+2025-02-10T14:45:31.359945+00:00 app[web.1]: 2025-02-10 23:45:31,359 DEBG 'web' stdout output:
+2025-02-10T14:45:31.359946+00:00 app[web.1]: 2025-02-10T23:45:31.359+09:00  INFO 6 --- [Humanage_app] [           main] jp.co.example.config.CacheInitializer    : [INFO] userCache キャッシュをクリアしました。
+2025-02-10T14:45:31.359946+00:00 app[web.1]: 
+2025-02-10T14:45:31.360907+00:00 app[web.1]: 2025-02-10 23:45:31,360 DEBG 'web' stdout output:
+2025-02-10T14:45:31.360907+00:00 app[web.1]: 2025-02-10T23:45:31.360+09:00 DEBUG 6 --- [Humanage_app] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2025-02-10T14:45:31.360908+00:00 app[web.1]: 
+2025-02-10T14:45:32.254218+00:00 app[web.1]: 2025-02-10 23:45:32,254 DEBG 'web' stdout output:
+2025-02-10T14:45:32.254238+00:00 app[web.1]: 2025-02-10T23:45:32.253+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-10T14:45:32.254239+00:00 app[web.1]: 
+2025-02-10T14:45:32.254359+00:00 app[web.1]: 2025-02-10 23:45:32,254 DEBG 'web' stdout output:
+2025-02-10T14:45:32.254363+00:00 app[web.1]: 2025-02-10T23:45:32.254+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-10T14:45:32.254363+00:00 app[web.1]: 
+2025-02-10T14:45:32.256119+00:00 app[web.1]: 2025-02-10 23:45:32,256 DEBG 'web' stdout output:
+2025-02-10T14:45:32.256120+00:00 app[web.1]: 2025-02-10T23:45:32.255+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-10T14:45:32.256120+00:00 app[web.1]: 
+2025-02-10T14:45:32.268069+00:00 app[web.1]: 2025-02-10 23:45:32,267 DEBG 'web' stdout output:
+2025-02-10T14:45:32.268073+00:00 app[web.1]: 2025-02-10T23:45:32.267+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@27194ad, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@8a5ad8f, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:45:32.268073+00:00 app[web.1]: 
+2025-02-10T14:45:32.268460+00:00 app[web.1]: 2025-02-10 23:45:32,268 DEBG 'web' stdout output:
+2025-02-10T14:45:32.268461+00:00 app[web.1]: 2025-02-10T23:45:32.268+09:00  WARN 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.filter.LoginFilter         : [WARN] 無効なトークンまたはセッションなしでのリクエスト: /
+2025-02-10T14:45:32.268462+00:00 app[web.1]: 
+2025-02-10T14:45:32.272156+00:00 heroku[router]: at=info method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=21b2fb84-98d5-48f9-84e2-582c869671b7 fwd="119.228.142.109" dyno=web.1 connect=0ms service=57ms status=302 bytes=157 protocol=https
+2025-02-10T14:45:32.489595+00:00 app[web.1]: 2025-02-10 23:45:32,489 DEBG 'web' stdout output:
+2025-02-10T14:45:32.489597+00:00 app[web.1]: 2025-02-10T23:45:32.489+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@323d578a, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@5828c252, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:45:32.489598+00:00 app[web.1]: 
+2025-02-10T14:45:32.491729+00:00 app[web.1]: 2025-02-10 23:45:32,491 DEBG 'web' stdout output:
+2025-02-10T14:45:32.491730+00:00 app[web.1]: 2025-02-10T23:45:32.490+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.filter.LoginFilter         : [INFO] ログインまたはログアウトまたはfavicon.icoリクエスト: 処理をスキップします
+2025-02-10T14:45:32.491731+00:00 app[web.1]: 
+2025-02-10T14:45:32.531381+00:00 app[web.1]: 2025-02-10 23:45:32,531 DEBG 'web' stdout output:
+2025-02-10T14:45:32.531389+00:00 app[web.1]: 2025-02-10T23:45:32.530+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] j.co.example.controller.LoginController  : [INFO] LoginController.javaのloginがGetで呼ばれました。受信したログイン要求: ユーザー名。model: {}
+2025-02-10T14:45:32.531390+00:00 app[web.1]: 
+2025-02-10T14:45:32.531391+00:00 app[web.1]: 2025-02-10 23:45:32,531 DEBG 'web' stdout output:
+2025-02-10T14:45:32.531391+00:00 app[web.1]: 2025-02-10T23:45:32.531+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] j.co.example.controller.form.LoginForm   : [INFO] LoginForm.javaの引数なしコンストラクタが呼ばれました。
+2025-02-10T14:45:32.531391+00:00 app[web.1]: 
+2025-02-10T14:45:35.347293+00:00 heroku[router]: at=info method=GET path="/login" host=humanage-app-1fe93ce442da.herokuapp.com request_id=d854210d-a6cd-45ff-8109-cbd86682a1ae fwd="119.228.142.109" dyno=web.1 connect=0ms service=2861ms status=200 bytes=1571 protocol=https
+2025-02-10T14:45:35.724768+00:00 app[web.1]: 2025-02-10 23:45:35,724 DEBG 'web' stdout output:
+2025-02-10T14:45:35.724784+00:00 app[web.1]: 2025-02-10T23:45:35.724+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@5f4d0215, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@518af78c, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:45:35.724785+00:00 app[web.1]: 
+2025-02-10T14:45:35.768029+00:00 heroku[router]: at=info method=GET path="/css/login.css" host=humanage-app-1fe93ce442da.herokuapp.com request_id=095c5908-d4a9-4ba1-8776-c8c6a86f2163 fwd="119.228.142.109" dyno=web.1 connect=0ms service=44ms status=200 bytes=854 protocol=https
+2025-02-10T14:45:36.022389+00:00 app[web.1]: 2025-02-10 23:45:36,022 DEBG 'web' stdout output:
+2025-02-10T14:45:36.022410+00:00 app[web.1]: 2025-02-10T23:45:36.022+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@ac727d3, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@400d8fb, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:45:36.022411+00:00 app[web.1]: 
+2025-02-10T14:45:36.030997+00:00 app[web.1]: 2025-02-10 23:45:36,030 DEBG 'web' stdout output:
+2025-02-10T14:45:36.030999+00:00 app[web.1]: 2025-02-10T23:45:36.030+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.filter.LoginFilter         : [INFO] ログインまたはログアウトまたはfavicon.icoリクエスト: 処理をスキップします
+2025-02-10T14:45:36.030999+00:00 app[web.1]: 
+2025-02-10T14:45:36.066444+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=humanage-app-1fe93ce442da.herokuapp.com request_id=f70da4ff-d5ef-4fa1-91d2-0b30496bd66a fwd="119.228.142.109" dyno=web.1 connect=0ms service=45ms status=200 bytes=320 protocol=https
+2025-02-10T14:46:00.564730+00:00 app[web.1]: 2025-02-10 23:46:00,564 DEBG 'web' stdout output:
+2025-02-10T14:46:00.564744+00:00 app[web.1]: 2025-02-10T23:46:00.564+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@bbd3743, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@57ac844, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:00.564745+00:00 app[web.1]: 
+2025-02-10T14:46:00.568338+00:00 app[web.1]: 2025-02-10 23:46:00,568 DEBG 'web' stdout output:
+2025-02-10T14:46:00.568340+00:00 app[web.1]: 2025-02-10T23:46:00.568+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.filter.LoginFilter         : [INFO] ログインまたはログアウトまたはfavicon.icoリクエスト: 処理をスキップします
+2025-02-10T14:46:00.568341+00:00 app[web.1]: 
+2025-02-10T14:46:00.586207+00:00 app[web.1]: 2025-02-10 23:46:00,586 DEBG 'web' stdout output:
+2025-02-10T14:46:00.586209+00:00 app[web.1]: 2025-02-10T23:46:00.585+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.controller.form.LoginForm   : [INFO] LoginForm.javaの引数なしコンストラクタが呼ばれました。
+2025-02-10T14:46:00.586210+00:00 app[web.1]: 
+2025-02-10T14:46:00.586333+00:00 app[web.1]: 2025-02-10 23:46:00,586 DEBG 'web' stdout output:
+2025-02-10T14:46:00.586333+00:00 app[web.1]: 2025-02-10T23:46:00.586+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.controller.form.LoginForm   : [INFO] usernameがセットされました: admin
+2025-02-10T14:46:00.586334+00:00 app[web.1]: 
+2025-02-10T14:46:00.588086+00:00 app[web.1]: 2025-02-10 23:46:00,588 DEBG 'web' stdout output:
+2025-02-10T14:46:00.588087+00:00 app[web.1]: 2025-02-10T23:46:00.587+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.controller.LoginController  : [INFO] LoginController.javaのloginがPostで呼ばれました。RequestBody=jp.co.example.controller.form.LoginForm@2dfde83, session=org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@44372c90
+2025-02-10T14:46:00.588088+00:00 app[web.1]: 
+2025-02-10T14:46:00.588302+00:00 app[web.1]: 2025-02-10 23:46:00,588 DEBG 'web' stdout output:
+2025-02-10T14:46:00.588303+00:00 app[web.1]: 2025-02-10T23:46:00.588+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.service.UserService        : [INFO] authenticateが呼ばれました。Redisを使用してユーザーを認証中。ユーザーネーム: admin, パスワード: [****]
+2025-02-10T14:46:00.588303+00:00 app[web.1]: 
+2025-02-10T14:46:00.596842+00:00 app[web.1]: 2025-02-10 23:46:00,596 DEBG 'web' stdout output:
+2025-02-10T14:46:00.596843+00:00 app[web.1]: 2025-02-10T23:46:00.596+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.service.UserService        : [INFO] isPasswordCorrectが呼ばれました。ユーザー: User{id=1, username=admin, department=No Department}, rawPassword: bbbb
+2025-02-10T14:46:00.596843+00:00 app[web.1]: 
+2025-02-10T14:46:00.684492+00:00 app[web.1]: 2025-02-10 23:46:00,684 DEBG 'web' stdout output:
+2025-02-10T14:46:00.684495+00:00 app[web.1]: 2025-02-10T23:46:00.684+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.service.UserService        : [INFO] Redisを���用して認証成功: admin
+2025-02-10T14:46:00.684495+00:00 app[web.1]: 
+2025-02-10T14:46:00.685287+00:00 app[web.1]: 2025-02-10 23:46:00,685 DEBG 'web' stdout output:
+2025-02-10T14:46:00.685288+00:00 app[web.1]: 2025-02-10T23:46:00.685+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.controller.LoginController  : [INFO] LoginController.javaのgenerateTokenForUserが呼ばれました: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:00.685288+00:00 app[web.1]: 
+2025-02-10T14:46:00.728153+00:00 heroku[router]: at=info method=POST path="/login" host=humanage-app-1fe93ce442da.herokuapp.com request_id=86648e0c-71f2-4b5c-9a8b-1968a0519312 fwd="119.228.142.109" dyno=web.1 connect=0ms service=168ms status=200 bytes=312 protocol=https
+2025-02-10T14:46:01.072715+00:00 app[web.1]: 2025-02-10 23:46:01,072 DEBG 'web' stdout output:
+2025-02-10T14:46:01.072745+00:00 app[web.1]: 2025-02-10T23:46:01.072+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-8] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@2a1b6f69, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@24dc845a, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:01.072745+00:00 app[web.1]: 
+2025-02-10T14:46:03.178148+00:00 heroku[router]: at=info method=GET path="/top" host=humanage-app-1fe93ce442da.herokuapp.com request_id=ea5bc038-a94f-45b4-bf05-20f8adc49fe3 fwd="119.228.142.109" dyno=web.1 connect=0ms service=2106ms status=200 bytes=910 protocol=https
+2025-02-10T14:46:03.582466+00:00 app[web.1]: 2025-02-10 23:46:03,582 DEBG 'web' stdout output:
+2025-02-10T14:46:03.582480+00:00 app[web.1]: 2025-02-10T23:46:03.582+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@4a69491e, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@44aebe23, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:03.582480+00:00 app[web.1]: 
+2025-02-10T14:46:03.614428+00:00 heroku[router]: at=info method=GET path="/css/dashboard.css" host=humanage-app-1fe93ce442da.herokuapp.com request_id=d6e16347-2506-40be-b2b8-8d0eda911e07 fwd="119.228.142.109" dyno=web.1 connect=1ms service=33ms status=200 bytes=1034 protocol=https
+2025-02-10T14:46:07.369064+00:00 app[web.1]: 2025-02-10 23:46:07,368 DEBG 'pdf-server' stdout output:
+2025-02-10T14:46:07.369089+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:46:07.369090+00:00 app[web.1]: rss: 72769536,
+2025-02-10T14:46:07.369091+00:00 app[web.1]: heapTotal: 18690048,
+2025-02-10T14:46:07.369091+00:00 app[web.1]: heapUsed: 16615640,
+2025-02-10T14:46:07.369091+00:00 app[web.1]: external: 4716452,
+2025-02-10T14:46:07.369091+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:46:07.369092+00:00 app[web.1]: }
+2025-02-10T14:46:07.369092+00:00 app[web.1]: 
+2025-02-10T14:46:07.777357+00:00 app[web.1]: 2025-02-10 23:46:07,777 DEBG 'release' stdout output:
+2025-02-10T14:46:07.777371+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:46:07.777372+00:00 app[web.1]: rss: 76890112,
+2025-02-10T14:46:07.777372+00:00 app[web.1]: heapTotal: 18427904,
+2025-02-10T14:46:07.777372+00:00 app[web.1]: heapUsed: 16485984,
+2025-02-10T14:46:07.777382+00:00 app[web.1]: external: 4716452,
+2025-02-10T14:46:07.777382+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:46:07.777383+00:00 app[web.1]: }
+2025-02-10T14:46:07.777383+00:00 app[web.1]: 
+2025-02-10T14:46:10.178938+00:00 app[web.1]: 2025-02-10 23:46:10,178 DEBG 'web' stdout output:
+2025-02-10T14:46:10.178941+00:00 app[web.1]: 2025-02-10T23:46:10.178+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@d5e02af, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@399fd74, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:10.178942+00:00 app[web.1]: 
+2025-02-10T14:46:10.184040+00:00 app[web.1]: 2025-02-10 23:46:10,183 DEBG 'web' stdout output:
+2025-02-10T14:46:10.184042+00:00 app[web.1]: 2025-02-10T23:46:10.183+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.c.e.controller.AttendanceController    : [INFO] AttendanceController.javaのshowAttendanceManagementが呼ばれました。year: null, month: null, model: {}
+2025-02-10T14:46:10.184042+00:00 app[web.1]: 
+2025-02-10T14:46:10.332925+00:00 app[web.1]: 2025-02-10 23:46:10,332 DEBG 'web' stdout output:
+2025-02-10T14:46:10.332932+00:00 app[web.1]: 2025-02-10T23:46:10.332+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] jp.co.example.service.UserService        : [INFO] UserService.javaのgetAllUsers() メソッドが呼び出されました。Supabaseからユーザーデータを取得中...
+2025-02-10T14:46:10.332933+00:00 app[web.1]: 
+2025-02-10T14:46:10.333054+00:00 app[web.1]: 2025-02-10 23:46:10,333 DEBG 'web' stdout output:
+2025-02-10T14:46:10.333055+00:00 app[web.1]: 2025-02-10T23:46:10.332+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] jp.co.example.service.UserService        : [INFO] validateSupabaseConnectionが呼ばれました。Supabase接続を検証中...
+2025-02-10T14:46:10.333055+00:00 app[web.1]: 
+2025-02-10T14:46:10.334956+00:00 app[web.1]: 2025-02-10 23:46:10,334 DEBG 'web' stdout output:
+2025-02-10T14:46:10.334956+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:10.334957+00:00 app[web.1]: select
+2025-02-10T14:46:10.334957+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:10.334958+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:10.334958+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:10.334958+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:10.334958+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:10.334959+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:10.334959+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:10.334959+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:10.334960+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:10.334960+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:10.334960+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:10.334960+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:10.334960+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:10.334960+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:10.334961+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:10.334961+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:10.334961+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:10.334961+00:00 app[web.1]: from
+2025-02-10T14:46:10.334962+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:10.334962+00:00 app[web.1]: 
+2025-02-10T14:46:10.484749+00:00 app[web.1]: 2025-02-10 23:46:10,484 DEBG 'web' stdout output:
+2025-02-10T14:46:10.484771+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:10.484772+00:00 app[web.1]: select
+2025-02-10T14:46:10.484773+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:10.484773+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:10.484773+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:10.484774+00:00 app[web.1]: from
+2025-02-10T14:46:10.484774+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:10.484774+00:00 app[web.1]: where
+2025-02-10T14:46:10.484775+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:10.484775+00:00 app[web.1]: 
+2025-02-10T14:46:10.633966+00:00 app[web.1]: 2025-02-10 23:46:10,633 DEBG 'web' stdout output:
+2025-02-10T14:46:10.633968+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:10.633968+00:00 app[web.1]: select
+2025-02-10T14:46:10.633969+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:10.633969+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:10.633970+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:10.633970+00:00 app[web.1]: from
+2025-02-10T14:46:10.633970+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:10.633971+00:00 app[web.1]: where
+2025-02-10T14:46:10.633971+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:10.633971+00:00 app[web.1]: 
+2025-02-10T14:46:10.784043+00:00 app[web.1]: 2025-02-10 23:46:10,783 DEBG 'web' stdout output:
+2025-02-10T14:46:10.784067+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:10.784067+00:00 app[web.1]: select
+2025-02-10T14:46:10.784068+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:10.784068+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:10.784068+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:10.784068+00:00 app[web.1]: from
+2025-02-10T14:46:10.784069+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:10.784069+00:00 app[web.1]: where
+2025-02-10T14:46:10.784069+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:10.784069+00:00 app[web.1]: 
+2025-02-10T14:46:10.934020+00:00 app[web.1]: 2025-02-10 23:46:10,933 DEBG 'web' stdout output:
+2025-02-10T14:46:10.934021+00:00 app[web.1]: 2025-02-10T23:46:10.933+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] jp.co.example.service.UserService        : [INFO] Supabaseからユーザーデータを正常に取得しました。
+2025-02-10T14:46:10.934021+00:00 app[web.1]: 
+2025-02-10T14:46:10.936548+00:00 app[web.1]: 2025-02-10 23:46:10,936 DEBG 'web' stdout output:
+2025-02-10T14:46:10.936549+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:10.936549+00:00 app[web.1]: select
+2025-02-10T14:46:10.936550+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:10.936550+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:10.936551+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:10.936551+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:10.936551+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:10.936552+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:10.936552+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:10.936552+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:10.936553+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:10.936553+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:10.936553+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:10.936554+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:10.936554+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:10.936554+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:10.936554+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:10.936555+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:10.936555+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:10.936555+00:00 app[web.1]: from
+2025-02-10T14:46:10.936556+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:10.936556+00:00 app[web.1]: 
+2025-02-10T14:46:11.085869+00:00 app[web.1]: 2025-02-10 23:46:11,085 DEBG 'web' stdout output:
+2025-02-10T14:46:11.085880+00:00 app[web.1]: 2025-02-10T23:46:11.085+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] jp.co.example.service.UserService        : [INFO] 取得したユーザー数: 4, ユーザーリスト: [User{id=2, username=user, department=採用部}, User{id=1, username=admin, department=人事部}, User{id=11, username=sss, department=営業部}, User{id=13, username=aaa, department=採用部}]
+2025-02-10T14:46:11.085881+00:00 app[web.1]: 
+2025-02-10T14:46:11.235426+00:00 app[web.1]: 2025-02-10 23:46:11,235 DEBG 'web' stdout output:
+2025-02-10T14:46:11.235428+00:00 app[web.1]: 2025-02-10T23:46:11.235+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのfindAttendanceByUserAndDateが呼ばれました。user: User{id=1, username=admin, department=No Department}, date: 2025-02-10
+2025-02-10T14:46:11.235428+00:00 app[web.1]: 
+2025-02-10T14:46:11.268993+00:00 app[web.1]: 2025-02-10 23:46:11,268 DEBG 'web' stdout output:
+2025-02-10T14:46:11.268995+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:11.268996+00:00 app[web.1]: select
+2025-02-10T14:46:11.268996+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:11.268997+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:11.268997+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:11.268997+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:11.268998+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:11.268998+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:11.268998+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:11.268999+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:11.268999+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:11.268999+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:11.269000+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:11.269000+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:11.269000+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:11.269000+00:00 app[web.1]: a1_0.updated_at,
+2025-02-10T14:46:11.269001+00:00 app[web.1]: a1_0.user_id
+2025-02-10T14:46:11.269001+00:00 app[web.1]: from
+2025-02-10T14:46:11.269003+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:11.269004+00:00 app[web.1]: where
+2025-02-10T14:46:11.269004+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:11.269004+00:00 app[web.1]: and a1_0.date=?
+2025-02-10T14:46:11.269004+00:00 app[web.1]: 
+2025-02-10T14:46:11.425715+00:00 app[web.1]: 2025-02-10 23:46:11,425 DEBG 'web' stdout output:
+2025-02-10T14:46:11.425729+00:00 app[web.1]: 2025-02-10T23:46:11.425+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.c.e.controller.AttendanceController    : [INFO] 出勤開始: 2025-02-10T09:04:52.558776
+2025-02-10T14:46:11.425729+00:00 app[web.1]: 
+2025-02-10T14:46:11.425730+00:00 app[web.1]: 2025-02-10 23:46:11,425 DEBG 'web' stdout output:
+2025-02-10T14:46:11.425730+00:00 app[web.1]: 2025-02-10T23:46:11.425+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.c.e.controller.AttendanceController    : [INFO] 休憩開始: 2025-02-10T09:05:02.295185
+2025-02-10T14:46:11.425731+00:00 app[web.1]: 2025-02-10T23:46:11.425+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.c.e.controller.AttendanceController    : [INFO] 休憩終了: 2025-02-10T11:52:44.721459
+2025-02-10T14:46:11.425733+00:00 app[web.1]: 2025-02-10T23:46:11.425+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.c.e.controller.AttendanceController    : [INFO] 退勤時間: null
+2025-02-10T14:46:11.425734+00:00 app[web.1]: 
+2025-02-10T14:46:11.425895+00:00 app[web.1]: 2025-02-10 23:46:11,425 DEBG 'web' stdout output:
+2025-02-10T14:46:11.425896+00:00 app[web.1]: 2025-02-10T23:46:11.425+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.co.example.service.AttendanceService   : [INFO] hasUnfinishedWorkが呼ばれました。User: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:11.425897+00:00 app[web.1]: 
+2025-02-10T14:46:11.433296+00:00 app[web.1]: 2025-02-10 23:46:11,433 DEBG 'web' stdout output:
+2025-02-10T14:46:11.433297+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:11.433298+00:00 app[web.1]: select
+2025-02-10T14:46:11.433298+00:00 app[web.1]: a1_0.id
+2025-02-10T14:46:11.433299+00:00 app[web.1]: from
+2025-02-10T14:46:11.433299+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:11.433300+00:00 app[web.1]: where
+2025-02-10T14:46:11.433300+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:11.433300+00:00 app[web.1]: and a1_0.end_time is null
+2025-02-10T14:46:11.433301+00:00 app[web.1]: and a1_0.date<?
+2025-02-10T14:46:11.433301+00:00 app[web.1]: fetch
+2025-02-10T14:46:11.433301+00:00 app[web.1]: first ? rows only
+2025-02-10T14:46:11.433302+00:00 app[web.1]: 
+2025-02-10T14:46:11.583306+00:00 app[web.1]: 2025-02-10 23:46:11,583 DEBG 'web' stdout output:
+2025-02-10T14:46:11.583329+00:00 app[web.1]: 2025-02-10T23:46:11.582+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのfindAttendanceByUserAndYearMonth関数が呼ばれました。user: User{id=1, username=admin, department=No Department}, year: 2025, month: 2
+2025-02-10T14:46:11.583330+00:00 app[web.1]: 
+2025-02-10T14:46:11.637024+00:00 app[web.1]: 2025-02-10 23:46:11,636 DEBG 'web' stdout output:
+2025-02-10T14:46:11.637026+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:11.637027+00:00 app[web.1]: SELECT
+2025-02-10T14:46:11.637027+00:00 app[web.1]: *
+2025-02-10T14:46:11.637027+00:00 app[web.1]: FROM
+2025-02-10T14:46:11.637028+00:00 app[web.1]: attendance
+2025-02-10T14:46:11.637028+00:00 app[web.1]: WHERE
+2025-02-10T14:46:11.637028+00:00 app[web.1]: user_id = ?
+2025-02-10T14:46:11.637029+00:00 app[web.1]: AND EXTRACT(YEAR FROM date) = ?
+2025-02-10T14:46:11.637029+00:00 app[web.1]: AND EXTRACT(MONTH FROM date) = ?
+2025-02-10T14:46:11.637030+00:00 app[web.1]: 
+2025-02-10T14:46:11.802122+00:00 app[web.1]: 2025-02-10 23:46:11,802 DEBG 'web' stdout output:
+2025-02-10T14:46:11.802133+00:00 app[web.1]: 2025-02-10T23:46:11.801+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのgetAvailableYearsが呼ばれました。user: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:11.802133+00:00 app[web.1]: 
+2025-02-10T14:46:11.803289+00:00 app[web.1]: 2025-02-10 23:46:11,803 DEBG 'web' stdout output:
+2025-02-10T14:46:11.803290+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:11.803291+00:00 app[web.1]: SELECT
+2025-02-10T14:46:11.803291+00:00 app[web.1]: DISTINCT EXTRACT(YEAR FROM date)
+2025-02-10T14:46:11.803291+00:00 app[web.1]: FROM
+2025-02-10T14:46:11.803292+00:00 app[web.1]: attendance
+2025-02-10T14:46:11.803293+00:00 app[web.1]: WHERE
+2025-02-10T14:46:11.803293+00:00 app[web.1]: user_id = ?
+2025-02-10T14:46:11.803294+00:00 app[web.1]: ORDER BY
+2025-02-10T14:46:11.803294+00:00 app[web.1]: EXTRACT(YEAR FROM date)
+2025-02-10T14:46:11.803295+00:00 app[web.1]: 
+2025-02-10T14:46:12.008612+00:00 app[web.1]: 2025-02-10 23:46:12,008 DEBG 'web' stdout output:
+2025-02-10T14:46:12.008614+00:00 app[web.1]: 2025-02-10T23:46:12.008+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-9] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのgetAvailableMonthsが呼ばれました。user: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:12.008614+00:00 app[web.1]: 
+2025-02-10T14:46:12.010505+00:00 app[web.1]: 2025-02-10 23:46:12,010 DEBG 'web' stdout output:
+2025-02-10T14:46:12.010506+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:12.010506+00:00 app[web.1]: SELECT
+2025-02-10T14:46:12.010507+00:00 app[web.1]: DISTINCT EXTRACT(MONTH FROM date)
+2025-02-10T14:46:12.010507+00:00 app[web.1]: FROM
+2025-02-10T14:46:12.010508+00:00 app[web.1]: attendance
+2025-02-10T14:46:12.010508+00:00 app[web.1]: WHERE
+2025-02-10T14:46:12.010509+00:00 app[web.1]: user_id = ?
+2025-02-10T14:46:12.010509+00:00 app[web.1]: ORDER BY
+2025-02-10T14:46:12.010509+00:00 app[web.1]: EXTRACT(MONTH FROM date)
+2025-02-10T14:46:12.010510+00:00 app[web.1]: 
+2025-02-10T14:46:14.626113+00:00 heroku[router]: at=info method=GET path="/attendanceManagement" host=humanage-app-1fe93ce442da.herokuapp.com request_id=18aad0da-03b0-4438-a46e-1867c0204253 fwd="119.228.142.109" dyno=web.1 connect=0ms service=4448ms status=200 bytes=1817 protocol=https
+2025-02-10T14:46:15.080436+00:00 heroku[router]: at=info method=GET path="/css/user.css" host=humanage-app-1fe93ce442da.herokuapp.com request_id=7adad98e-9950-480d-a1aa-225c514f2409 fwd="119.228.142.109" dyno=web.1 connect=0ms service=68ms status=200 bytes=1903 protocol=https
+2025-02-10T14:46:15.101676+00:00 heroku[router]: at=info method=GET path="/js/attendance.js" host=humanage-app-1fe93ce442da.herokuapp.com request_id=5e399c34-623d-44b4-b2c6-0a289a9cb745 fwd="119.228.142.109" dyno=web.1 connect=0ms service=93ms status=200 bytes=1235 protocol=https
+2025-02-10T14:46:15.020534+00:00 app[web.1]: 2025-02-10 23:46:15,013 DEBG 'web' stdout output:
+2025-02-10T14:46:15.020548+00:00 app[web.1]: 2025-02-10T23:46:15.012+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@23df03e5, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@5a93372, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:15.020549+00:00 app[web.1]: 
+2025-02-10T14:46:15.020549+00:00 app[web.1]: 2025-02-10 23:46:15,014 DEBG 'web' stdout output:
+2025-02-10T14:46:15.020550+00:00 app[web.1]: 2025-02-10T23:46:15.013+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@4e8a907a, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@40731e0b, チェーン: org.apache.catalina.core.ApplicationFilterChain@11ecec0e
+2025-02-10T14:46:15.020550+00:00 app[web.1]: 
+2025-02-10T14:46:18.313695+00:00 app[web.1]: 2025-02-10 23:46:18,313 DEBG 'web' stdout output:
+2025-02-10T14:46:18.313711+00:00 app[web.1]: 2025-02-10T23:46:18.313+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@23a072ee, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@778dd472, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:18.313711+00:00 app[web.1]: 
+2025-02-10T14:46:18.320953+00:00 app[web.1]: 2025-02-10 23:46:18,320 DEBG 'web' stdout output:
+2025-02-10T14:46:18.320967+00:00 app[web.1]: 2025-02-10T23:46:18.320+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] j.c.e.controller.AttendanceController    : [INFO] AttendanceService.javaのendAttendaceが呼ばれました。redirectAttributes: {}, user: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:18.320967+00:00 app[web.1]: 
+2025-02-10T14:46:18.320968+00:00 app[web.1]: 2025-02-10 23:46:18,320 DEBG 'web' stdout output:
+2025-02-10T14:46:18.320968+00:00 app[web.1]: 2025-02-10T23:46:18.320+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのfindAttendanceByUserAndDateが呼ばれました。user: User{id=1, username=admin, department=No Department}, date: 2025-02-10
+2025-02-10T14:46:18.320968+00:00 app[web.1]: 
+2025-02-10T14:46:18.322128+00:00 app[web.1]: 2025-02-10 23:46:18,322 DEBG 'web' stdout output:
+2025-02-10T14:46:18.322129+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:18.322129+00:00 app[web.1]: select
+2025-02-10T14:46:18.322131+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:18.322131+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:18.322132+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:18.322132+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:18.322132+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:18.322132+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:18.322133+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:18.322133+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:18.322133+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:18.322133+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:18.322133+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:18.322133+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:18.322133+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:18.322134+00:00 app[web.1]: a1_0.updated_at,
+2025-02-10T14:46:18.322134+00:00 app[web.1]: a1_0.user_id
+2025-02-10T14:46:18.322134+00:00 app[web.1]: from
+2025-02-10T14:46:18.322134+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:18.322134+00:00 app[web.1]: where
+2025-02-10T14:46:18.322134+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:18.322134+00:00 app[web.1]: and a1_0.date=?
+2025-02-10T14:46:18.322135+00:00 app[web.1]: 
+2025-02-10T14:46:18.621355+00:00 app[web.1]: 2025-02-10 23:46:18,621 DEBG 'web' stdout output:
+2025-02-10T14:46:18.621381+00:00 app[web.1]: 2025-02-10T23:46:18.620+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのsaveAttendanceが呼ばれました。attendance: Attendance{id=23, date=2025-02-10, startTime=2025-02-10T09:04:52.558776}
+2025-02-10T14:46:18.621381+00:00 app[web.1]: 
+2025-02-10T14:46:18.622066+00:00 app[web.1]: 2025-02-10 23:46:18,622 DEBG 'web' stdout output:
+2025-02-10T14:46:18.622068+00:00 app[web.1]: 2025-02-10T23:46:18.621+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.util.OvertimeCalculator    : [INFO] OvertimeCalculator.javaのcalculateOvertimeMinutes関数が呼ばれました。Attendance: Attendance{id=23, date=2025-02-10, startTime=2025-02-10T09:04:52.558776}
+2025-02-10T14:46:18.622068+00:00 app[web.1]: 
+2025-02-10T14:46:18.622195+00:00 app[web.1]: 2025-02-10 23:46:18,622 DEBG 'web' stdout output:
+2025-02-10T14:46:18.622195+00:00 app[web.1]: 2025-02-10T23:46:18.621+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.util.OvertimeCalculator    : [INFO] OvertimeCalculator.javaのcalculateWorkignTime関数が呼ばれました。Attendance: Attendance{id=23, date=2025-02-10, startTime=2025-02-10T09:04:52.558776}
+2025-02-10T14:46:18.622196+00:00 app[web.1]: 
+2025-02-10T14:46:18.622304+00:00 app[web.1]: 2025-02-10 23:46:18,622 DEBG 'web' stdout output:
+2025-02-10T14:46:18.622306+00:00 app[web.1]: 2025-02-10T23:46:18.622+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.util.OvertimeCalculator    : [INFO] 勤務時間計算結果:881minutes
+2025-02-10T14:46:18.622306+00:00 app[web.1]: 
+2025-02-10T14:46:18.622369+00:00 app[web.1]: 2025-02-10 23:46:18,622 DEBG 'web' stdout output:
+2025-02-10T14:46:18.622369+00:00 app[web.1]: 2025-02-10T23:46:18.622+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.util.OvertimeCalculator    : [INFO] OvertimeCalculator.javaのcalculateBreakTime関数が呼ばれました。Attendance: Attendance{id=23, date=2025-02-10, startTime=2025-02-10T09:04:52.558776}
+2025-02-10T14:46:18.622370+00:00 app[web.1]: 
+2025-02-10T14:46:18.622499+00:00 app[web.1]: 2025-02-10 23:46:18,622 DEBG 'web' stdout output:
+2025-02-10T14:46:18.622500+00:00 app[web.1]: 2025-02-10T23:46:18.622+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.util.OvertimeCalculator    : [INFO] 休憩時間計算結果:167minutes
+2025-02-10T14:46:18.622500+00:00 app[web.1]: 
+2025-02-10T14:46:18.622608+00:00 app[web.1]: 2025-02-10 23:46:18,622 DEBG 'web' stdout output:
+2025-02-10T14:46:18.622608+00:00 app[web.1]: 2025-02-10T23:46:18.622+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.util.OvertimeCalculator    : [INFO] 残業時間計算結果:234minutes
+2025-02-10T14:46:18.622608+00:00 app[web.1]: 
+2025-02-10T14:46:18.636350+00:00 app[web.1]: 2025-02-10 23:46:18,636 DEBG 'web' stdout output:
+2025-02-10T14:46:18.636351+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:18.636352+00:00 app[web.1]: select
+2025-02-10T14:46:18.636352+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:18.636352+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:18.636353+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:18.636353+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:18.636354+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:18.636354+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:18.636355+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:18.636355+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:18.636355+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:18.636355+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:18.636355+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:18.636356+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:18.636356+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:18.636356+00:00 app[web.1]: a1_0.updated_at,
+2025-02-10T14:46:18.636357+00:00 app[web.1]: a1_0.user_id,
+2025-02-10T14:46:18.636357+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:18.636357+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:18.636357+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:18.636357+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:18.636358+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:18.636358+00:00 app[web.1]: m1_0.id,
+2025-02-10T14:46:18.636360+00:00 app[web.1]: m1_0.address,
+2025-02-10T14:46:18.636360+00:00 app[web.1]: m1_0.department_id,
+2025-02-10T14:46:18.636361+00:00 app[web.1]: m1_0.dob,
+2025-02-10T14:46:18.636361+00:00 app[web.1]: m1_0.email,
+2025-02-10T14:46:18.636361+00:00 app[web.1]: m1_0.gender,
+2025-02-10T14:46:18.636361+00:00 app[web.1]: m1_0.hire_date,
+2025-02-10T14:46:18.636361+00:00 app[web.1]: m1_0.last_modified_at,
+2025-02-10T14:46:18.636361+00:00 app[web.1]: lmb1_0.id,
+2025-02-10T14:46:18.636362+00:00 app[web.1]: lmb1_0.address,
+2025-02-10T14:46:18.636362+00:00 app[web.1]: lmb1_0.department_id,
+2025-02-10T14:46:18.636362+00:00 app[web.1]: lmb1_0.dob,
+2025-02-10T14:46:18.636362+00:00 app[web.1]: lmb1_0.email,
+2025-02-10T14:46:18.636362+00:00 app[web.1]: lmb1_0.gender,
+2025-02-10T14:46:18.636363+00:00 app[web.1]: lmb1_0.hire_date,
+2025-02-10T14:46:18.636363+00:00 app[web.1]: lmb1_0.last_modified_at,
+2025-02-10T14:46:18.636363+00:00 app[web.1]: lmb1_0.last_modified_by,
+2025-02-10T14:46:18.636363+00:00 app[web.1]: lmb1_0.password,
+2025-02-10T14:46:18.636363+00:00 app[web.1]: lmb1_0.phone,
+2025-02-10T14:46:18.636363+00:00 app[web.1]: lmb1_0.postal_code,
+2025-02-10T14:46:18.636364+00:00 app[web.1]: lmb1_0.reset_token,
+2025-02-10T14:46:18.636364+00:00 app[web.1]: lmb1_0.retirement_date,
+2025-02-10T14:46:18.636364+00:00 app[web.1]: lmb1_0.role,
+2025-02-10T14:46:18.636364+00:00 app[web.1]: lmb1_0.status,
+2025-02-10T14:46:18.636364+00:00 app[web.1]: lmb1_0.username,
+2025-02-10T14:46:18.636364+00:00 app[web.1]: c1_0.user_id,
+2025-02-10T14:46:18.636365+00:00 app[web.1]: c1_0.id,
+2025-02-10T14:46:18.636365+00:00 app[web.1]: c1_0.contract_date,
+2025-02-10T14:46:18.636365+00:00 app[web.1]: c1_0.expiry_date,
+2025-02-10T14:46:18.636365+00:00 app[web.1]: c1_0.status,
+2025-02-10T14:46:18.636365+00:00 app[web.1]: c1_0.type,
+2025-02-10T14:46:18.636365+00:00 app[web.1]: m1_0.password,
+2025-02-10T14:46:18.636365+00:00 app[web.1]: m1_0.phone,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: m1_0.postal_code,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: m1_0.reset_token,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: m1_0.retirement_date,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: m1_0.role,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: m1_0.status,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: m1_0.username,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:18.636366+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:18.636367+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:18.636367+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:18.636367+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:18.636367+00:00 app[web.1]: lmb3_0.id,
+2025-02-10T14:46:18.636368+00:00 app[web.1]: lmb3_0.address,
+2025-02-10T14:46:18.636368+00:00 app[web.1]: lmb3_0.department_id,
+2025-02-10T14:46:18.636368+00:00 app[web.1]: d4_0.id,
+2025-02-10T14:46:18.636368+00:00 app[web.1]: d4_0.department_name,
+2025-02-10T14:46:18.636369+00:00 app[web.1]: m2_0.id,
+2025-02-10T14:46:18.636369+00:00 app[web.1]: m2_0.address,
+2025-02-10T14:46:18.636369+00:00 app[web.1]: m2_0.department_id,
+2025-02-10T14:46:18.636369+00:00 app[web.1]: m2_0.dob,
+2025-02-10T14:46:18.636369+00:00 app[web.1]: m2_0.email,
+2025-02-10T14:46:18.636370+00:00 app[web.1]: m2_0.gender,
+2025-02-10T14:46:18.636380+00:00 app[web.1]: m2_0.hire_date,
+2025-02-10T14:46:18.636380+00:00 app[web.1]: m2_0.last_modified_at,
+2025-02-10T14:46:18.636380+00:00 app[web.1]: m2_0.last_modified_by,
+2025-02-10T14:46:18.636380+00:00 app[web.1]: m2_0.password,
+2025-02-10T14:46:18.636380+00:00 app[web.1]: m2_0.phone,
+2025-02-10T14:46:18.636381+00:00 app[web.1]: m2_0.postal_code,
+2025-02-10T14:46:18.636381+00:00 app[web.1]: m2_0.reset_token,
+2025-02-10T14:46:18.636381+00:00 app[web.1]: m2_0.retirement_date,
+2025-02-10T14:46:18.636381+00:00 app[web.1]: m2_0.role,
+2025-02-10T14:46:18.636381+00:00 app[web.1]: m2_0.status,
+2025-02-10T14:46:18.636382+00:00 app[web.1]: m2_0.username,
+2025-02-10T14:46:18.636382+00:00 app[web.1]: lmb3_0.dob,
+2025-02-10T14:46:18.636382+00:00 app[web.1]: lmb3_0.email,
+2025-02-10T14:46:18.636382+00:00 app[web.1]: lmb3_0.gender,
+2025-02-10T14:46:18.636383+00:00 app[web.1]: lmb3_0.hire_date,
+2025-02-10T14:46:18.636383+00:00 app[web.1]: lmb3_0.last_modified_at,
+2025-02-10T14:46:18.636383+00:00 app[web.1]: lmb3_0.last_modified_by,
+2025-02-10T14:46:18.636383+00:00 app[web.1]: lmb3_0.password,
+2025-02-10T14:46:18.636384+00:00 app[web.1]: lmb3_0.phone,
+2025-02-10T14:46:18.636384+00:00 app[web.1]: lmb3_0.postal_code,
+2025-02-10T14:46:18.636384+00:00 app[web.1]: lmb3_0.reset_token,
+2025-02-10T14:46:18.636384+00:00 app[web.1]: lmb3_0.retirement_date,
+2025-02-10T14:46:18.636384+00:00 app[web.1]: lmb3_0.role,
+2025-02-10T14:46:18.636384+00:00 app[web.1]: lmb3_0.status,
+2025-02-10T14:46:18.636384+00:00 app[web.1]: lmb3_0.username,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:18.636385+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:18.636386+00:00 app[web.1]: from
+2025-02-10T14:46:18.636386+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:18.636386+00:00 app[web.1]: join
+2025-02-10T14:46:18.636386+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:18.636386+00:00 app[web.1]: on u1_0.id=a1_0.user_id
+2025-02-10T14:46:18.636387+00:00 app[web.1]: left join
+2025-02-10T14:46:18.636387+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:18.636387+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:46:18.636387+00:00 app[web.1]: left join
+2025-02-10T14:46:18.636387+00:00 app[web.1]: users m1_0
+2025-02-10T14:46:18.636387+00:00 app[web.1]: on m1_0.id=d1_0.manager_id
+2025-02-10T14:46:18.636388+00:00 app[web.1]: left join
+2025-02-10T14:46:18.636388+00:00 app[web.1]: users lmb1_0
+2025-02-10T14:46:18.636388+00:00 app[web.1]: on lmb1_0.id=m1_0.last_modified_by
+2025-02-10T14:46:18.636388+00:00 app[web.1]: left join
+2025-02-10T14:46:18.636388+00:00 app[web.1]: contracts c1_0
+2025-02-10T14:46:18.636388+00:00 app[web.1]: on lmb1_0.id=c1_0.user_id
+2025-02-10T14:46:18.636389+00:00 app[web.1]: left join
+2025-02-10T14:46:18.636389+00:00 app[web.1]: users lmb3_0
+2025-02-10T14:46:18.636389+00:00 app[web.1]: on lmb3_0.id=u1_0.last_modified_by
+2025-02-10T14:46:18.636389+00:00 app[web.1]: left join
+2025-02-10T14:46:18.636389+00:00 app[web.1]: departments d4_0
+2025-02-10T14:46:18.636389+00:00 app[web.1]: on d4_0.id=lmb3_0.department_id
+2025-02-10T14:46:18.636390+00:00 app[web.1]: left join
+2025-02-10T14:46:18.636390+00:00 app[web.1]: users m2_0
+2025-02-10T14:46:18.636390+00:00 app[web.1]: on m2_0.id=d4_0.manager_id
+2025-02-10T14:46:18.636390+00:00 app[web.1]: where
+2025-02-10T14:46:18.636390+00:00 app[web.1]: a1_0.id=?
+2025-02-10T14:46:18.636391+00:00 app[web.1]: 
+2025-02-10T14:46:18.813395+00:00 app[web.1]: 2025-02-10 23:46:18,813 DEBG 'web' stdout output:
+2025-02-10T14:46:18.813397+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:18.813397+00:00 app[web.1]: select
+2025-02-10T14:46:18.813398+00:00 app[web.1]: s1_0.user_id,
+2025-02-10T14:46:18.813398+00:00 app[web.1]: s1_0.id,
+2025-02-10T14:46:18.813399+00:00 app[web.1]: s1_0.allowances,
+2025-02-10T14:46:18.813399+00:00 app[web.1]: s1_0.basic_salary,
+2025-02-10T14:46:18.813399+00:00 app[web.1]: s1_0.deductions,
+2025-02-10T14:46:18.813400+00:00 app[web.1]: s1_0.employment_insurance,
+2025-02-10T14:46:18.813400+00:00 app[web.1]: s1_0.health_insurance,
+2025-02-10T14:46:18.813400+00:00 app[web.1]: s1_0.overtime_hours,
+2025-02-10T14:46:18.813401+00:00 app[web.1]: s1_0.overtime_minutes,
+2025-02-10T14:46:18.813401+00:00 app[web.1]: s1_0.overtime_pay,
+2025-02-10T14:46:18.813404+00:00 app[web.1]: s1_0.payment_date,
+2025-02-10T14:46:18.813404+00:00 app[web.1]: s1_0.payment_month,
+2025-02-10T14:46:18.813405+00:00 app[web.1]: s1_0.pension,
+2025-02-10T14:46:18.813405+00:00 app[web.1]: s1_0.total_salary
+2025-02-10T14:46:18.813405+00:00 app[web.1]: from
+2025-02-10T14:46:18.813405+00:00 app[web.1]: salaries s1_0
+2025-02-10T14:46:18.813406+00:00 app[web.1]: where
+2025-02-10T14:46:18.813406+00:00 app[web.1]: s1_0.user_id=?
+2025-02-10T14:46:18.813406+00:00 app[web.1]: 
+2025-02-10T14:46:18.966654+00:00 app[web.1]: 2025-02-10 23:46:18,966 DEBG 'web' stdout output:
+2025-02-10T14:46:18.966675+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:18.966675+00:00 app[web.1]: select
+2025-02-10T14:46:18.966675+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:18.966676+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:18.966676+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:18.966677+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:18.966678+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:18.966678+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:18.966678+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:18.966678+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:18.966679+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:18.966679+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:18.966679+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:18.966679+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:18.966680+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:18.966680+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:18.966680+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:18.966680+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:18.966680+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:18.966681+00:00 app[web.1]: from
+2025-02-10T14:46:18.966681+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:18.966681+00:00 app[web.1]: where
+2025-02-10T14:46:18.966681+00:00 app[web.1]: u1_0.department_id=?
+2025-02-10T14:46:18.966681+00:00 app[web.1]: 
+2025-02-10T14:46:19.115791+00:00 app[web.1]: 2025-02-10 23:46:19,115 DEBG 'web' stdout output:
+2025-02-10T14:46:19.115793+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:19.115793+00:00 app[web.1]: select
+2025-02-10T14:46:19.115793+00:00 app[web.1]: c1_0.user_id,
+2025-02-10T14:46:19.115794+00:00 app[web.1]: c1_0.id,
+2025-02-10T14:46:19.115794+00:00 app[web.1]: c1_0.contract_date,
+2025-02-10T14:46:19.115795+00:00 app[web.1]: c1_0.expiry_date,
+2025-02-10T14:46:19.115795+00:00 app[web.1]: c1_0.status,
+2025-02-10T14:46:19.115795+00:00 app[web.1]: c1_0.type
+2025-02-10T14:46:19.115795+00:00 app[web.1]: from
+2025-02-10T14:46:19.115796+00:00 app[web.1]: contracts c1_0
+2025-02-10T14:46:19.115796+00:00 app[web.1]: where
+2025-02-10T14:46:19.115796+00:00 app[web.1]: c1_0.user_id=?
+2025-02-10T14:46:19.115796+00:00 app[web.1]: 
+2025-02-10T14:46:19.265613+00:00 app[web.1]: 2025-02-10 23:46:19,265 DEBG 'web' stdout output:
+2025-02-10T14:46:19.265623+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:19.265624+00:00 app[web.1]: select
+2025-02-10T14:46:19.265624+00:00 app[web.1]: a1_0.user_id,
+2025-02-10T14:46:19.265625+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:19.265625+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:19.265626+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:19.265626+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:19.265626+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:19.265626+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:19.265627+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:19.265627+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:19.265627+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:19.265628+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:19.265628+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:19.265628+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:19.265629+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:19.265629+00:00 app[web.1]: a1_0.updated_at
+2025-02-10T14:46:19.265629+00:00 app[web.1]: from
+2025-02-10T14:46:19.265630+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:19.265630+00:00 app[web.1]: where
+2025-02-10T14:46:19.265630+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:19.265630+00:00 app[web.1]: 
+2025-02-10T14:46:19.457874+00:00 app[web.1]: 2025-02-10 23:46:19,457 DEBG 'web' stdout output:
+2025-02-10T14:46:19.457876+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:19.457876+00:00 app[web.1]: update
+2025-02-10T14:46:19.457877+00:00 app[web.1]: attendance
+2025-02-10T14:46:19.457877+00:00 app[web.1]: set
+2025-02-10T14:46:19.457877+00:00 app[web.1]: break_end=?,
+2025-02-10T14:46:19.457878+00:00 app[web.1]: break_end_as_date=?,
+2025-02-10T14:46:19.457878+00:00 app[web.1]: break_start=?,
+2025-02-10T14:46:19.457878+00:00 app[web.1]: break_start_as_date=?,
+2025-02-10T14:46:19.457879+00:00 app[web.1]: date=?,
+2025-02-10T14:46:19.457879+00:00 app[web.1]: deleted_at=?,
+2025-02-10T14:46:19.457879+00:00 app[web.1]: end_time=?,
+2025-02-10T14:46:19.457880+00:00 app[web.1]: end_time_as_date=?,
+2025-02-10T14:46:19.457880+00:00 app[web.1]: overtime_minutes=?,
+2025-02-10T14:46:19.457880+00:00 app[web.1]: start_time=?,
+2025-02-10T14:46:19.457880+00:00 app[web.1]: start_time_as_date=?,
+2025-02-10T14:46:19.457881+00:00 app[web.1]: updated_at=?,
+2025-02-10T14:46:19.457881+00:00 app[web.1]: user_id=?
+2025-02-10T14:46:19.457884+00:00 app[web.1]: where
+2025-02-10T14:46:19.457884+00:00 app[web.1]: id=?
+2025-02-10T14:46:19.457884+00:00 app[web.1]: 
+2025-02-10T14:46:19.771011+00:00 app[web.1]: 2025-02-10 23:46:19,770 DEBG 'web' stdout output:
+2025-02-10T14:46:19.771024+00:00 app[web.1]: 2025-02-10T23:46:19.768+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.service.SalaryService      : [INFO] User → byte[] コンバーターが正常に登録されています。
+2025-02-10T14:46:19.771024+00:00 app[web.1]: 2025-02-10T23:46:19.769+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.service.SalaryService      : [INFO] byte[] → User コンバーターが正常に登録されています。
+2025-02-10T14:46:19.771026+00:00 app[web.1]: 2025-02-10T23:46:19.769+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] j.c.e.config.UserToByteArrayConverter    : [INFO] UserToByteArrayConverter.javaのconvert()が呼ばれました。user: User{id=1, username=admin, department=No Department}, 呼び出し元: jp.co.example.config.UserToByteArrayConverter.convert@30
+2025-02-10T14:46:19.771026+00:00 app[web.1]: 
+2025-02-10T14:46:19.771027+00:00 app[web.1]: 2025-02-10 23:46:19,770 DEBG 'web' stdout output:
+2025-02-10T14:46:19.771028+00:00 app[web.1]: 2025-02-10T23:46:19.770+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] j.c.e.config.UserFromByteArrayConverter  : [INFO] UserFromByteArrayConverter.javaのconvert()が呼ばれました。byte[]: [123, 10, 32, 32, 34, 105, 100, 34, 32, 58, 32, 49, 44, 10, 32, 32, 34, 117, 115, 101, 114, 110, 97, 109, 101, 34, 32, 58, 32, 34, 97, 100, 109, 105, 110, 34, 44, 10, 32, 32, 34, 101, 109, 97, 105, 108, 34, 32, 58, 32, 34, 98, 98, 98, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109, 34, 44, 10, 32, 32, 34, 112, 97, 115, 115, 119, 111, 114, 100, 34, 32, 58, 32, 34, 36, 50, 97, 36, 49, 48, 36, 76, 104, 121, 48, 108, 50, 79, 86, 108, 46, 76, 71, 114, 108, 68, 118, 50, 105, 54, 84, 69, 79, 65, 122, 69, 53, 87, 112, 73, 110, 117, 104, 101, 75, 53, 72, 122, 49, 101, 78, 80, 88, 50, 56, 111, 112, 83, 86, 47, 112, 104, 54, 87, 34, 44, 10, 32, 32, 34, 100, 111, 98, 34, 32, 58, 32, 34, 49, 57, 57, 52, 45, 48, 51, 45, 50, 49, 34, 44, 10, 32, 32, 34, 103, 101, 110, 100, 101, 114, 34, 32, 58, 32, 34, -27, -91, -77, -26, -128, -89, 34, 44, 10, 32, 32, 34, 112, 104, 111, 110, 101, 34, 32, 58, 32, 34, 48, 57, 48, 45, 49, 49, 49, 49, 45, 49, 57, 57, 49, 34, 44, 10, 32, 32, 34, 97, 100, 100, 114, 101, 115, 115, 34, 32, 58, 32, 34, -26, -99, -79, -28, -70, -84, -23, -125, -67, -27, -113, -80, -26, -99, -79, -27, -116, -70, -26, -96, -71, -27, -78, -72, 34, 44, 10, 32, 32, 34, 114, 111, 108, 101, 34, 32, 58, 32, 34, -28, -70, -70, -28, -70, -117, -25, -82, -95, -25, -112, -122, -24, -128, -123, 34, 44, 10, 32, 32, 34, 115, 116, 97, 116, 117, 115, 34, 32, 58, 32, 34, -27, -100, -88, -24, -127, -73, -28, -72, -83, 34, 44, 10, 32, 32, 34, 112, 111, 115, 116, 97, 108, 67, 111, 100, 101, 34, 32, 58, 32, 34, 49, 49, 48, 45, 48, 48, 48, 51, 34, 44, 10, 32, 32, 34, 108, 97, 115, 116, 77, 111, 100, 105, 102, 105, 101, 100, 65, 116, 34, 32, 58, 32, 34, 50, 48, 50, 53, 45, 48, 50, 45, 48, 53, 84, 49, 52, 58, 48, 48, 58, 53, 56, 46, 55, 57, 54, 57, 56, 54, 34, 44, 10, 32, 32, 34, 97, 103, 101, 34, 32, 58, 32, 51, 48, 10, 125], 呼び出し元: jp.co.example.config.UserFromByteArrayConverter.convert@34
+2025-02-10T14:46:19.771029+00:00 app[web.1]: 
+2025-02-10T14:46:19.773656+00:00 app[web.1]: 2025-02-10 23:46:19,773 DEBG 'web' stdout output:
+2025-02-10T14:46:19.773666+00:00 app[web.1]: 2025-02-10T23:46:19.771+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのgetSalaryByUserAndPaymentMonthが呼ばれました。userId: 1, YearMonth: 2025-02
+2025-02-10T14:46:19.773667+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:19.773667+00:00 app[web.1]: select
+2025-02-10T14:46:19.773668+00:00 app[web.1]: s1_0.id,
+2025-02-10T14:46:19.773668+00:00 app[web.1]: s1_0.allowances,
+2025-02-10T14:46:19.773668+00:00 app[web.1]: s1_0.basic_salary,
+2025-02-10T14:46:19.773669+00:00 app[web.1]: s1_0.deductions,
+2025-02-10T14:46:19.773670+00:00 app[web.1]: s1_0.employment_insurance,
+2025-02-10T14:46:19.773670+00:00 app[web.1]: s1_0.health_insurance,
+2025-02-10T14:46:19.773670+00:00 app[web.1]: s1_0.overtime_hours,
+2025-02-10T14:46:19.773670+00:00 app[web.1]: s1_0.overtime_minutes,
+2025-02-10T14:46:19.773671+00:00 app[web.1]: s1_0.overtime_pay,
+2025-02-10T14:46:19.773671+00:00 app[web.1]: s1_0.payment_date,
+2025-02-10T14:46:19.773671+00:00 app[web.1]: s1_0.payment_month,
+2025-02-10T14:46:19.773671+00:00 app[web.1]: s1_0.pension,
+2025-02-10T14:46:19.773671+00:00 app[web.1]: s1_0.total_salary,
+2025-02-10T14:46:19.773672+00:00 app[web.1]: s1_0.user_id
+2025-02-10T14:46:19.773672+00:00 app[web.1]: from
+2025-02-10T14:46:19.773672+00:00 app[web.1]: salaries s1_0
+2025-02-10T14:46:19.773672+00:00 app[web.1]: where
+2025-02-10T14:46:19.773672+00:00 app[web.1]: s1_0.user_id=?
+2025-02-10T14:46:19.773673+00:00 app[web.1]: and s1_0.payment_month=?
+2025-02-10T14:46:19.773673+00:00 app[web.1]: 
+2025-02-10T14:46:19.924921+00:00 app[web.1]: 2025-02-10 23:46:19,924 DEBG 'web' stdout output:
+2025-02-10T14:46:19.924923+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:19.924923+00:00 app[web.1]: select
+2025-02-10T14:46:19.924924+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:19.924925+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:19.924925+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:19.924925+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:19.924926+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:19.924926+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:46:19.924926+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:19.924927+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:19.924927+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:19.924927+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:19.924927+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:19.924928+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:19.924928+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:19.924928+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:19.924928+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:19.924929+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:19.924929+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:19.924929+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:19.924929+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:19.924929+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:19.924930+00:00 app[web.1]: from
+2025-02-10T14:46:19.924930+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:19.924930+00:00 app[web.1]: join
+2025-02-10T14:46:19.924930+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:19.924931+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:46:19.924931+00:00 app[web.1]: where
+2025-02-10T14:46:19.924931+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:46:19.924931+00:00 app[web.1]: 
+2025-02-10T14:46:20.076436+00:00 app[web.1]: 2025-02-10 23:46:20,076 DEBG 'web' stdout output:
+2025-02-10T14:46:20.076439+00:00 app[web.1]: 2025-02-10T23:46:19.921+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.service.SalaryService      : [INFO] 給与情報が見つかりました: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:46:20.076440+00:00 app[web.1]: 
+2025-02-10T14:46:20.078546+00:00 app[web.1]: 2025-02-10 23:46:20,078 DEBG 'web' stdout output:
+2025-02-10T14:46:20.078547+00:00 app[web.1]: 2025-02-10T23:46:20.078+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.service.SalaryService      : [INFO] 給与はすでに計算されています。再計算をスキップします。既存の給与: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:46:20.078548+00:00 app[web.1]: 
+2025-02-10T14:46:20.280119+00:00 heroku[router]: at=info method=POST path="/attendance/end" host=humanage-app-1fe93ce442da.herokuapp.com request_id=b9094f6c-5dc9-4655-98dc-98349364ec24 fwd="119.228.142.109" dyno=web.1 connect=0ms service=1968ms status=302 bytes=286 protocol=https
+2025-02-10T14:46:20.507246+00:00 app[web.1]: 2025-02-10 23:46:20,507 DEBG 'web' stdout output:
+2025-02-10T14:46:20.507260+00:00 app[web.1]: 2025-02-10T23:46:20.506+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@2e01b7cd, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@64cb3da, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:20.507261+00:00 app[web.1]: 
+2025-02-10T14:46:20.520500+00:00 app[web.1]: 2025-02-10 23:46:20,520 DEBG 'web' stdout output:
+2025-02-10T14:46:20.520503+00:00 app[web.1]: 2025-02-10T23:46:20.520+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.c.e.controller.AttendanceController    : [INFO] AttendanceController.javaのshowAttendanceManagementが呼ばれました。year: null, month: null, model: {success=退勤が完了し、残業時間が反映されました}
+2025-02-10T14:46:20.520504+00:00 app[web.1]: 
+2025-02-10T14:46:20.521020+00:00 app[web.1]: 2025-02-10 23:46:20,520 DEBG 'web' stdout output:
+2025-02-10T14:46:20.521022+00:00 app[web.1]: 2025-02-10T23:46:20.520+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] UserService.javaのgetAllUsers() メソッドが呼び出されました。Supabaseからユーザーデータを取得中...
+2025-02-10T14:46:20.521023+00:00 app[web.1]: 
+2025-02-10T14:46:20.521023+00:00 app[web.1]: 2025-02-10 23:46:20,520 DEBG 'web' stdout output:
+2025-02-10T14:46:20.521028+00:00 app[web.1]: 2025-02-10T23:46:20.520+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] validateSupabaseConnectionが呼ばれました。Supabase接続を検証中...
+2025-02-10T14:46:20.521028+00:00 app[web.1]: 
+2025-02-10T14:46:20.522814+00:00 app[web.1]: 2025-02-10 23:46:20,522 DEBG 'web' stdout output:
+2025-02-10T14:46:20.522815+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:20.522815+00:00 app[web.1]: select
+2025-02-10T14:46:20.522816+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:20.522816+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:20.522816+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:20.522817+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:20.522817+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:20.522817+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:20.522818+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:20.522818+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:20.522818+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:20.522818+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:20.522818+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:20.522819+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:20.522819+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:20.522819+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:20.522819+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:20.522819+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:20.522819+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:20.522820+00:00 app[web.1]: from
+2025-02-10T14:46:20.522820+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:20.522820+00:00 app[web.1]: 
+2025-02-10T14:46:20.671944+00:00 app[web.1]: 2025-02-10 23:46:20,671 DEBG 'web' stdout output:
+2025-02-10T14:46:20.671945+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:20.671946+00:00 app[web.1]: select
+2025-02-10T14:46:20.671946+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:20.671947+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:20.671947+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:20.671947+00:00 app[web.1]: from
+2025-02-10T14:46:20.671948+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:20.671948+00:00 app[web.1]: where
+2025-02-10T14:46:20.671948+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:20.671948+00:00 app[web.1]: 
+2025-02-10T14:46:20.821303+00:00 app[web.1]: 2025-02-10 23:46:20,821 DEBG 'web' stdout output:
+2025-02-10T14:46:20.821316+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:20.821316+00:00 app[web.1]: select
+2025-02-10T14:46:20.821317+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:20.821318+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:20.821318+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:20.821319+00:00 app[web.1]: from
+2025-02-10T14:46:20.821319+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:20.821319+00:00 app[web.1]: where
+2025-02-10T14:46:20.821319+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:20.821320+00:00 app[web.1]: 
+2025-02-10T14:46:20.970430+00:00 app[web.1]: 2025-02-10 23:46:20,970 DEBG 'web' stdout output:
+2025-02-10T14:46:20.970432+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:20.970432+00:00 app[web.1]: select
+2025-02-10T14:46:20.970433+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:20.970433+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:20.970434+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:20.970434+00:00 app[web.1]: from
+2025-02-10T14:46:20.970434+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:20.970434+00:00 app[web.1]: where
+2025-02-10T14:46:20.970435+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:20.970435+00:00 app[web.1]: 
+2025-02-10T14:46:21.119880+00:00 app[web.1]: 2025-02-10 23:46:21,119 DEBG 'web' stdout output:
+2025-02-10T14:46:21.119903+00:00 app[web.1]: 2025-02-10T23:46:21.119+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] Supabaseからユーザーデータを正常に取得しました。
+2025-02-10T14:46:21.119904+00:00 app[web.1]: 
+2025-02-10T14:46:21.122559+00:00 app[web.1]: 2025-02-10 23:46:21,122 DEBG 'web' stdout output:
+2025-02-10T14:46:21.122560+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:21.122560+00:00 app[web.1]: select
+2025-02-10T14:46:21.122561+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:21.122561+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:21.122561+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:21.122562+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:21.122562+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:21.122562+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:21.122562+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:21.122562+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:21.122563+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:21.122564+00:00 app[web.1]: from
+2025-02-10T14:46:21.122564+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:21.122564+00:00 app[web.1]: 
+2025-02-10T14:46:21.271670+00:00 app[web.1]: 2025-02-10 23:46:21,271 DEBG 'web' stdout output:
+2025-02-10T14:46:21.271676+00:00 app[web.1]: 2025-02-10T23:46:21.271+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] 取得したユーザー数: 4, ユーザーリスト: [User{id=2, username=user, department=採用部}, User{id=1, username=admin, department=人事部}, User{id=11, username=sss, department=営業部}, User{id=13, username=aaa, department=採用部}]
+2025-02-10T14:46:21.271677+00:00 app[web.1]: 
+2025-02-10T14:46:21.422495+00:00 app[web.1]: 2025-02-10 23:46:21,420 DEBG 'web' stdout output:
+2025-02-10T14:46:21.422507+00:00 app[web.1]: 2025-02-10T23:46:21.420+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのfindAttendanceByUserAndDateが呼ばれました。user: User{id=1, username=admin, department=No Department}, date: 2025-02-10
+2025-02-10T14:46:21.422517+00:00 app[web.1]: 
+2025-02-10T14:46:21.422517+00:00 app[web.1]: 2025-02-10 23:46:21,422 DEBG 'web' stdout output:
+2025-02-10T14:46:21.422518+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:21.422518+00:00 app[web.1]: select
+2025-02-10T14:46:21.422518+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:21.422519+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:21.422520+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:21.422520+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:21.422521+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:21.422521+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:21.422521+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:21.422521+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:21.422522+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:21.422522+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:21.422522+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:21.422522+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:21.422522+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:21.422523+00:00 app[web.1]: a1_0.updated_at,
+2025-02-10T14:46:21.422523+00:00 app[web.1]: a1_0.user_id
+2025-02-10T14:46:21.422523+00:00 app[web.1]: from
+2025-02-10T14:46:21.422523+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:21.422523+00:00 app[web.1]: where
+2025-02-10T14:46:21.422524+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:21.422524+00:00 app[web.1]: and a1_0.date=?
+2025-02-10T14:46:21.422524+00:00 app[web.1]: 
+2025-02-10T14:46:21.572874+00:00 app[web.1]: 2025-02-10 23:46:21,572 DEBG 'web' stdout output:
+2025-02-10T14:46:21.572876+00:00 app[web.1]: 2025-02-10T23:46:21.572+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.c.e.controller.AttendanceController    : [INFO] 出勤開始: 2025-02-10T09:04:52.558776
+2025-02-10T14:46:21.572876+00:00 app[web.1]: 
+2025-02-10T14:46:21.573204+00:00 app[web.1]: 2025-02-10 23:46:21,573 DEBG 'web' stdout output:
+2025-02-10T14:46:21.573205+00:00 app[web.1]: 2025-02-10T23:46:21.572+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.c.e.controller.AttendanceController    : [INFO] 休憩開始: 2025-02-10T09:05:02.295185
+2025-02-10T14:46:21.573206+00:00 app[web.1]: 
+2025-02-10T14:46:21.573333+00:00 app[web.1]: 2025-02-10 23:46:21,573 DEBG 'web' stdout output:
+2025-02-10T14:46:21.573334+00:00 app[web.1]: 2025-02-10T23:46:21.573+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.c.e.controller.AttendanceController    : [INFO] 休憩終了: 2025-02-10T11:52:44.721459
+2025-02-10T14:46:21.573334+00:00 app[web.1]: 
+2025-02-10T14:46:21.573445+00:00 app[web.1]: 2025-02-10 23:46:21,573 DEBG 'web' stdout output:
+2025-02-10T14:46:21.573448+00:00 app[web.1]: 2025-02-10T23:46:21.573+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.c.e.controller.AttendanceController    : [INFO] 退勤時間: 2025-02-10T23:46:18.619799
+2025-02-10T14:46:21.573448+00:00 app[web.1]: 
+2025-02-10T14:46:21.573736+00:00 app[web.1]: 2025-02-10 23:46:21,573 DEBG 'web' stdout output:
+2025-02-10T14:46:21.573749+00:00 app[web.1]: 2025-02-10T23:46:21.573+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.co.example.service.AttendanceService   : [INFO] hasUnfinishedWorkが呼ばれました。User: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:21.573749+00:00 app[web.1]: 
+2025-02-10T14:46:21.576370+00:00 app[web.1]: 2025-02-10 23:46:21,576 DEBG 'web' stdout output:
+2025-02-10T14:46:21.576371+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:21.576371+00:00 app[web.1]: select
+2025-02-10T14:46:21.576371+00:00 app[web.1]: a1_0.id
+2025-02-10T14:46:21.576371+00:00 app[web.1]: from
+2025-02-10T14:46:21.576372+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:21.576372+00:00 app[web.1]: where
+2025-02-10T14:46:21.576372+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:21.576372+00:00 app[web.1]: and a1_0.end_time is null
+2025-02-10T14:46:21.576373+00:00 app[web.1]: and a1_0.date<?
+2025-02-10T14:46:21.576373+00:00 app[web.1]: fetch
+2025-02-10T14:46:21.576373+00:00 app[web.1]: first ? rows only
+2025-02-10T14:46:21.576373+00:00 app[web.1]: 
+2025-02-10T14:46:21.726200+00:00 app[web.1]: 2025-02-10 23:46:21,726 DEBG 'web' stdout output:
+2025-02-10T14:46:21.726210+00:00 app[web.1]: 2025-02-10T23:46:21.725+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのfindAttendanceByUserAndYearMonth関数が呼ばれました。user: User{id=1, username=admin, department=No Department}, year: 2025, month: 2
+2025-02-10T14:46:21.726211+00:00 app[web.1]: 
+2025-02-10T14:46:21.728161+00:00 app[web.1]: 2025-02-10 23:46:21,728 DEBG 'web' stdout output:
+2025-02-10T14:46:21.728163+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:21.728163+00:00 app[web.1]: SELECT
+2025-02-10T14:46:21.728163+00:00 app[web.1]: *
+2025-02-10T14:46:21.728164+00:00 app[web.1]: FROM
+2025-02-10T14:46:21.728164+00:00 app[web.1]: attendance
+2025-02-10T14:46:21.728164+00:00 app[web.1]: WHERE
+2025-02-10T14:46:21.728165+00:00 app[web.1]: user_id = ?
+2025-02-10T14:46:21.728165+00:00 app[web.1]: AND EXTRACT(YEAR FROM date) = ?
+2025-02-10T14:46:21.728166+00:00 app[web.1]: AND EXTRACT(MONTH FROM date) = ?
+2025-02-10T14:46:21.728166+00:00 app[web.1]: 
+2025-02-10T14:46:21.881703+00:00 app[web.1]: 2025-02-10 23:46:21,881 DEBG 'web' stdout output:
+2025-02-10T14:46:21.881705+00:00 app[web.1]: 2025-02-10T23:46:21.881+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのgetAvailableYearsが呼ばれました。user: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:21.881705+00:00 app[web.1]: 
+2025-02-10T14:46:21.882321+00:00 app[web.1]: 2025-02-10 23:46:21,882 DEBG 'web' stdout output:
+2025-02-10T14:46:21.882321+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:21.882321+00:00 app[web.1]: SELECT
+2025-02-10T14:46:21.882322+00:00 app[web.1]: DISTINCT EXTRACT(YEAR FROM date)
+2025-02-10T14:46:21.882322+00:00 app[web.1]: FROM
+2025-02-10T14:46:21.882323+00:00 app[web.1]: attendance
+2025-02-10T14:46:21.882323+00:00 app[web.1]: WHERE
+2025-02-10T14:46:21.882323+00:00 app[web.1]: user_id = ?
+2025-02-10T14:46:21.882323+00:00 app[web.1]: ORDER BY
+2025-02-10T14:46:21.882324+00:00 app[web.1]: EXTRACT(YEAR FROM date)
+2025-02-10T14:46:21.882324+00:00 app[web.1]: 
+2025-02-10T14:46:22.055618+00:00 heroku[router]: at=info method=GET path="/attendanceManagement" host=humanage-app-1fe93ce442da.herokuapp.com request_id=ec844034-f9cf-4e00-87c1-46691d9e0810 fwd="119.228.142.109" dyno=web.1 connect=0ms service=1549ms status=200 bytes=1831 protocol=https
+2025-02-10T14:46:41.248754+00:00 app[web.1]: 2025-02-10 23:46:41,248 DEBG 'web' stdout output:
+2025-02-10T14:46:41.248784+00:00 app[web.1]: 2025-02-10T23:46:41.248+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@6fcf6af2, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@9325900, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:41.248785+00:00 app[web.1]: 
+2025-02-10T14:46:41.279765+00:00 app[web.1]: 2025-02-10 23:46:41,279 DEBG 'web' stdout output:
+2025-02-10T14:46:41.279767+00:00 app[web.1]: 2025-02-10T23:46:41.279+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] j.c.e.controller.AttendanceController    : [INFO] forceEndAttendanceが呼ばれました。userId: 2, forceEndDateStr: 2025-02-10, forceEndTimeStr: 23:46
+2025-02-10T14:46:41.279767+00:00 app[web.1]: 
+2025-02-10T14:46:41.279768+00:00 app[web.1]: 2025-02-10 23:46:41,279 DEBG 'web' stdout output:
+2025-02-10T14:46:41.279769+00:00 app[web.1]: 2025-02-10T23:46:41.279+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.service.UserService        : [INFO] getUserByIdが呼ばれました: 2
+2025-02-10T14:46:41.279769+00:00 app[web.1]: 
+2025-02-10T14:46:41.434224+00:00 app[web.1]: 2025-02-10 23:46:41,434 DEBG 'web' stdout output:
+2025-02-10T14:46:41.434226+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:41.434226+00:00 app[web.1]: select
+2025-02-10T14:46:41.434226+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:41.434227+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:41.434227+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:41.434228+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:41.434228+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:41.434228+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:46:41.434228+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:41.434229+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:41.434229+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:41.434229+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:41.434229+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:41.434230+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:41.434230+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:41.434230+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:41.434231+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:41.434231+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:41.434231+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:41.434231+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:41.434231+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:41.434232+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:41.434232+00:00 app[web.1]: from
+2025-02-10T14:46:41.434232+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:41.434232+00:00 app[web.1]: join
+2025-02-10T14:46:41.434233+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:41.434233+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:46:41.434233+00:00 app[web.1]: where
+2025-02-10T14:46:41.434233+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:46:41.434234+00:00 app[web.1]: 
+2025-02-10T14:46:41.735438+00:00 app[web.1]: 2025-02-10 23:46:41,735 DEBG 'web' stdout output:
+2025-02-10T14:46:41.735468+00:00 app[web.1]: 2025-02-10T23:46:41.735+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] j.co.example.service.AttendanceService   : [INFO] findUnfinishedAttendanceByUserAndDateが呼ばれました。user: User{id=2, username=user, department=採用部}, date: 2025-02-10
+2025-02-10T14:46:41.735469+00:00 app[web.1]: 
+2025-02-10T14:46:41.738578+00:00 app[web.1]: 2025-02-10 23:46:41,738 DEBG 'web' stdout output:
+2025-02-10T14:46:41.738580+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:41.738580+00:00 app[web.1]: select
+2025-02-10T14:46:41.738581+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:41.738581+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:41.738582+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:41.738582+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:41.738583+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:41.738583+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:41.738583+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:41.738583+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:41.738584+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:41.738584+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:41.738584+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:41.738584+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:41.738585+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:41.738585+00:00 app[web.1]: a1_0.updated_at,
+2025-02-10T14:46:41.738585+00:00 app[web.1]: a1_0.user_id
+2025-02-10T14:46:41.738585+00:00 app[web.1]: from
+2025-02-10T14:46:41.738585+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:41.738586+00:00 app[web.1]: where
+2025-02-10T14:46:41.738586+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:41.738586+00:00 app[web.1]: and a1_0.date=?
+2025-02-10T14:46:41.738586+00:00 app[web.1]: and a1_0.end_time is null
+2025-02-10T14:46:41.738586+00:00 app[web.1]: 
+2025-02-10T14:46:41.892647+00:00 app[web.1]: 2025-02-10 23:46:41,892 DEBG 'web' stdout output:
+2025-02-10T14:46:41.892649+00:00 app[web.1]: 2025-02-10T23:46:41.892+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] j.co.example.service.AttendanceService   : [INFO] updateAttendanceが呼ばれました。attendance: Attendance{id=24, date=2025-02-10, startTime=2025-02-10T09:18:57.803966}
+2025-02-10T14:46:41.892650+00:00 app[web.1]: 
+2025-02-10T14:46:41.893513+00:00 app[web.1]: 2025-02-10 23:46:41,893 DEBG 'web' stdout output:
+2025-02-10T14:46:41.893514+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:41.893514+00:00 app[web.1]: select
+2025-02-10T14:46:41.893515+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:41.893515+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:41.893516+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:41.893516+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:41.893517+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:41.893517+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:41.893517+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:41.893518+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:41.893518+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:41.893518+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:41.893518+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:41.893519+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:41.893519+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:41.893519+00:00 app[web.1]: a1_0.updated_at,
+2025-02-10T14:46:41.893519+00:00 app[web.1]: a1_0.user_id,
+2025-02-10T14:46:41.893519+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:41.893519+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:41.893520+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:41.893520+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:41.893520+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:41.893520+00:00 app[web.1]: m1_0.id,
+2025-02-10T14:46:41.893520+00:00 app[web.1]: m1_0.address,
+2025-02-10T14:46:41.893520+00:00 app[web.1]: m1_0.department_id,
+2025-02-10T14:46:41.893521+00:00 app[web.1]: m1_0.dob,
+2025-02-10T14:46:41.893521+00:00 app[web.1]: m1_0.email,
+2025-02-10T14:46:41.893521+00:00 app[web.1]: m1_0.gender,
+2025-02-10T14:46:41.893522+00:00 app[web.1]: m1_0.hire_date,
+2025-02-10T14:46:41.893522+00:00 app[web.1]: m1_0.last_modified_at,
+2025-02-10T14:46:41.893522+00:00 app[web.1]: lmb1_0.id,
+2025-02-10T14:46:41.893522+00:00 app[web.1]: lmb1_0.address,
+2025-02-10T14:46:41.893522+00:00 app[web.1]: lmb1_0.department_id,
+2025-02-10T14:46:41.893523+00:00 app[web.1]: lmb1_0.dob,
+2025-02-10T14:46:41.893523+00:00 app[web.1]: lmb1_0.email,
+2025-02-10T14:46:41.893523+00:00 app[web.1]: lmb1_0.gender,
+2025-02-10T14:46:41.893523+00:00 app[web.1]: lmb1_0.hire_date,
+2025-02-10T14:46:41.893523+00:00 app[web.1]: lmb1_0.last_modified_at,
+2025-02-10T14:46:41.893524+00:00 app[web.1]: lmb1_0.last_modified_by,
+2025-02-10T14:46:41.893524+00:00 app[web.1]: lmb1_0.password,
+2025-02-10T14:46:41.893524+00:00 app[web.1]: lmb1_0.phone,
+2025-02-10T14:46:41.893524+00:00 app[web.1]: lmb1_0.postal_code,
+2025-02-10T14:46:41.893524+00:00 app[web.1]: lmb1_0.reset_token,
+2025-02-10T14:46:41.893524+00:00 app[web.1]: lmb1_0.retirement_date,
+2025-02-10T14:46:41.893525+00:00 app[web.1]: lmb1_0.role,
+2025-02-10T14:46:41.893525+00:00 app[web.1]: lmb1_0.status,
+2025-02-10T14:46:41.893525+00:00 app[web.1]: lmb1_0.username,
+2025-02-10T14:46:41.893525+00:00 app[web.1]: c1_0.user_id,
+2025-02-10T14:46:41.893525+00:00 app[web.1]: c1_0.id,
+2025-02-10T14:46:41.893525+00:00 app[web.1]: c1_0.contract_date,
+2025-02-10T14:46:41.893526+00:00 app[web.1]: c1_0.expiry_date,
+2025-02-10T14:46:41.893526+00:00 app[web.1]: c1_0.status,
+2025-02-10T14:46:41.893526+00:00 app[web.1]: c1_0.type,
+2025-02-10T14:46:41.893526+00:00 app[web.1]: m1_0.password,
+2025-02-10T14:46:41.893526+00:00 app[web.1]: m1_0.phone,
+2025-02-10T14:46:41.893527+00:00 app[web.1]: m1_0.postal_code,
+2025-02-10T14:46:41.893527+00:00 app[web.1]: m1_0.reset_token,
+2025-02-10T14:46:41.893528+00:00 app[web.1]: m1_0.retirement_date,
+2025-02-10T14:46:41.893528+00:00 app[web.1]: m1_0.role,
+2025-02-10T14:46:41.893528+00:00 app[web.1]: m1_0.status,
+2025-02-10T14:46:41.893528+00:00 app[web.1]: m1_0.username,
+2025-02-10T14:46:41.893528+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:41.893529+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:41.893529+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:41.893529+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:41.893529+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:41.893530+00:00 app[web.1]: lmb3_0.id,
+2025-02-10T14:46:41.893530+00:00 app[web.1]: lmb3_0.address,
+2025-02-10T14:46:41.893530+00:00 app[web.1]: lmb3_0.department_id,
+2025-02-10T14:46:41.893530+00:00 app[web.1]: d4_0.id,
+2025-02-10T14:46:41.893530+00:00 app[web.1]: d4_0.department_name,
+2025-02-10T14:46:41.893530+00:00 app[web.1]: m2_0.id,
+2025-02-10T14:46:41.893531+00:00 app[web.1]: m2_0.address,
+2025-02-10T14:46:41.893531+00:00 app[web.1]: m2_0.department_id,
+2025-02-10T14:46:41.893531+00:00 app[web.1]: m2_0.dob,
+2025-02-10T14:46:41.893531+00:00 app[web.1]: m2_0.email,
+2025-02-10T14:46:41.893531+00:00 app[web.1]: m2_0.gender,
+2025-02-10T14:46:41.893532+00:00 app[web.1]: m2_0.hire_date,
+2025-02-10T14:46:41.893532+00:00 app[web.1]: m2_0.last_modified_at,
+2025-02-10T14:46:41.893532+00:00 app[web.1]: m2_0.last_modified_by,
+2025-02-10T14:46:41.893532+00:00 app[web.1]: m2_0.password,
+2025-02-10T14:46:41.893532+00:00 app[web.1]: m2_0.phone,
+2025-02-10T14:46:41.893532+00:00 app[web.1]: m2_0.postal_code,
+2025-02-10T14:46:41.893533+00:00 app[web.1]: m2_0.reset_token,
+2025-02-10T14:46:41.893533+00:00 app[web.1]: m2_0.retirement_date,
+2025-02-10T14:46:41.893533+00:00 app[web.1]: m2_0.role,
+2025-02-10T14:46:41.893533+00:00 app[web.1]: m2_0.status,
+2025-02-10T14:46:41.893533+00:00 app[web.1]: m2_0.username,
+2025-02-10T14:46:41.893533+00:00 app[web.1]: lmb3_0.dob,
+2025-02-10T14:46:41.893534+00:00 app[web.1]: lmb3_0.email,
+2025-02-10T14:46:41.893534+00:00 app[web.1]: lmb3_0.gender,
+2025-02-10T14:46:41.893534+00:00 app[web.1]: lmb3_0.hire_date,
+2025-02-10T14:46:41.893534+00:00 app[web.1]: lmb3_0.last_modified_at,
+2025-02-10T14:46:41.893534+00:00 app[web.1]: lmb3_0.last_modified_by,
+2025-02-10T14:46:41.893535+00:00 app[web.1]: lmb3_0.password,
+2025-02-10T14:46:41.893535+00:00 app[web.1]: lmb3_0.phone,
+2025-02-10T14:46:41.893535+00:00 app[web.1]: lmb3_0.postal_code,
+2025-02-10T14:46:41.893535+00:00 app[web.1]: lmb3_0.reset_token,
+2025-02-10T14:46:41.893536+00:00 app[web.1]: lmb3_0.retirement_date,
+2025-02-10T14:46:41.893536+00:00 app[web.1]: lmb3_0.role,
+2025-02-10T14:46:41.893536+00:00 app[web.1]: lmb3_0.status,
+2025-02-10T14:46:41.893536+00:00 app[web.1]: lmb3_0.username,
+2025-02-10T14:46:41.893536+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:41.893536+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:41.893537+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:41.893537+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:41.893537+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:41.893537+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:41.893537+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:41.893538+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:41.893538+00:00 app[web.1]: from
+2025-02-10T14:46:41.893538+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:41.893538+00:00 app[web.1]: join
+2025-02-10T14:46:41.893538+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:41.893539+00:00 app[web.1]: on u1_0.id=a1_0.user_id
+2025-02-10T14:46:41.893539+00:00 app[web.1]: left join
+2025-02-10T14:46:41.893539+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:41.893539+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:46:41.893539+00:00 app[web.1]: left join
+2025-02-10T14:46:41.893540+00:00 app[web.1]: users m1_0
+2025-02-10T14:46:41.893540+00:00 app[web.1]: on m1_0.id=d1_0.manager_id
+2025-02-10T14:46:41.893540+00:00 app[web.1]: left join
+2025-02-10T14:46:41.893540+00:00 app[web.1]: users lmb1_0
+2025-02-10T14:46:41.893540+00:00 app[web.1]: on lmb1_0.id=m1_0.last_modified_by
+2025-02-10T14:46:41.893540+00:00 app[web.1]: left join
+2025-02-10T14:46:41.893541+00:00 app[web.1]: contracts c1_0
+2025-02-10T14:46:41.893541+00:00 app[web.1]: on lmb1_0.id=c1_0.user_id
+2025-02-10T14:46:41.893541+00:00 app[web.1]: left join
+2025-02-10T14:46:41.893541+00:00 app[web.1]: users lmb3_0
+2025-02-10T14:46:41.893541+00:00 app[web.1]: on lmb3_0.id=u1_0.last_modified_by
+2025-02-10T14:46:41.893541+00:00 app[web.1]: left join
+2025-02-10T14:46:41.893541+00:00 app[web.1]: departments d4_0
+2025-02-10T14:46:41.893542+00:00 app[web.1]: on d4_0.id=lmb3_0.department_id
+2025-02-10T14:46:41.893542+00:00 app[web.1]: left join
+2025-02-10T14:46:41.893542+00:00 app[web.1]: users m2_0
+2025-02-10T14:46:41.893543+00:00 app[web.1]: on m2_0.id=d4_0.manager_id
+2025-02-10T14:46:41.893543+00:00 app[web.1]: where
+2025-02-10T14:46:41.893543+00:00 app[web.1]: a1_0.id=?
+2025-02-10T14:46:41.893543+00:00 app[web.1]: 
+2025-02-10T14:46:42.045988+00:00 app[web.1]: 2025-02-10 23:46:42,045 DEBG 'web' stdout output:
+2025-02-10T14:46:42.046001+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:42.046001+00:00 app[web.1]: select
+2025-02-10T14:46:42.046002+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:42.046003+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:42.046003+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:42.046003+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:42.046004+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:42.046004+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:42.046004+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:42.046004+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:42.046005+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:42.046005+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:42.046005+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:42.046005+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:42.046006+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:42.046006+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:42.046006+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:42.046006+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:42.046006+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:42.046007+00:00 app[web.1]: from
+2025-02-10T14:46:42.046007+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:42.046007+00:00 app[web.1]: where
+2025-02-10T14:46:42.046007+00:00 app[web.1]: u1_0.department_id=?
+2025-02-10T14:46:42.046007+00:00 app[web.1]: 
+2025-02-10T14:46:42.198482+00:00 app[web.1]: 2025-02-10 23:46:42,198 DEBG 'web' stdout output:
+2025-02-10T14:46:42.198484+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:42.198484+00:00 app[web.1]: select
+2025-02-10T14:46:42.198485+00:00 app[web.1]: s1_0.user_id,
+2025-02-10T14:46:42.198485+00:00 app[web.1]: s1_0.id,
+2025-02-10T14:46:42.198486+00:00 app[web.1]: s1_0.allowances,
+2025-02-10T14:46:42.198486+00:00 app[web.1]: s1_0.basic_salary,
+2025-02-10T14:46:42.198487+00:00 app[web.1]: s1_0.deductions,
+2025-02-10T14:46:42.198488+00:00 app[web.1]: s1_0.employment_insurance,
+2025-02-10T14:46:42.198488+00:00 app[web.1]: s1_0.health_insurance,
+2025-02-10T14:46:42.198488+00:00 app[web.1]: s1_0.overtime_hours,
+2025-02-10T14:46:42.198488+00:00 app[web.1]: s1_0.overtime_minutes,
+2025-02-10T14:46:42.198489+00:00 app[web.1]: s1_0.overtime_pay,
+2025-02-10T14:46:42.198489+00:00 app[web.1]: s1_0.payment_date,
+2025-02-10T14:46:42.198489+00:00 app[web.1]: s1_0.payment_month,
+2025-02-10T14:46:42.198489+00:00 app[web.1]: s1_0.pension,
+2025-02-10T14:46:42.198490+00:00 app[web.1]: s1_0.total_salary
+2025-02-10T14:46:42.198490+00:00 app[web.1]: from
+2025-02-10T14:46:42.198490+00:00 app[web.1]: salaries s1_0
+2025-02-10T14:46:42.198490+00:00 app[web.1]: where
+2025-02-10T14:46:42.198490+00:00 app[web.1]: s1_0.user_id=?
+2025-02-10T14:46:42.198491+00:00 app[web.1]: 
+2025-02-10T14:46:42.360938+00:00 app[web.1]: 2025-02-10 23:46:42,360 DEBG 'web' stdout output:
+2025-02-10T14:46:42.360948+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:42.360949+00:00 app[web.1]: select
+2025-02-10T14:46:42.360949+00:00 app[web.1]: c1_0.user_id,
+2025-02-10T14:46:42.360950+00:00 app[web.1]: c1_0.id,
+2025-02-10T14:46:42.360951+00:00 app[web.1]: c1_0.contract_date,
+2025-02-10T14:46:42.360951+00:00 app[web.1]: c1_0.expiry_date,
+2025-02-10T14:46:42.360951+00:00 app[web.1]: c1_0.status,
+2025-02-10T14:46:42.360952+00:00 app[web.1]: c1_0.type
+2025-02-10T14:46:42.360952+00:00 app[web.1]: from
+2025-02-10T14:46:42.360953+00:00 app[web.1]: contracts c1_0
+2025-02-10T14:46:42.360953+00:00 app[web.1]: where
+2025-02-10T14:46:42.360953+00:00 app[web.1]: c1_0.user_id=?
+2025-02-10T14:46:42.360953+00:00 app[web.1]: 
+2025-02-10T14:46:42.510924+00:00 app[web.1]: 2025-02-10 23:46:42,509 DEBG 'web' stdout output:
+2025-02-10T14:46:42.510926+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:42.510926+00:00 app[web.1]: select
+2025-02-10T14:46:42.510926+00:00 app[web.1]: a1_0.user_id,
+2025-02-10T14:46:42.510927+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:42.510927+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:42.510928+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:42.510928+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:42.510928+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:42.510929+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:42.510929+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:42.510929+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:42.510929+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:42.510930+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:42.510930+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:42.510930+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:42.510930+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:42.510931+00:00 app[web.1]: a1_0.updated_at
+2025-02-10T14:46:42.510931+00:00 app[web.1]: from
+2025-02-10T14:46:42.510931+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:42.510931+00:00 app[web.1]: where
+2025-02-10T14:46:42.510932+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:42.510932+00:00 app[web.1]: 
+2025-02-10T14:46:42.664879+00:00 app[web.1]: 2025-02-10 23:46:42,661 DEBG 'web' stdout output:
+2025-02-10T14:46:42.664897+00:00 app[web.1]: 2025-02-10T23:46:42.660+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] j.co.example.service.AttendanceService   : [INFO] 勤怠情報が正常に更新されました: 24
+2025-02-10T14:46:42.664897+00:00 app[web.1]: 
+2025-02-10T14:46:42.664897+00:00 app[web.1]: 2025-02-10 23:46:42,663 DEBG 'web' stdout output:
+2025-02-10T14:46:42.664898+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:42.664908+00:00 app[web.1]: update
+2025-02-10T14:46:42.664908+00:00 app[web.1]: attendance
+2025-02-10T14:46:42.664909+00:00 app[web.1]: set
+2025-02-10T14:46:42.664909+00:00 app[web.1]: break_end=?,
+2025-02-10T14:46:42.664909+00:00 app[web.1]: break_end_as_date=?,
+2025-02-10T14:46:42.664910+00:00 app[web.1]: break_start=?,
+2025-02-10T14:46:42.664910+00:00 app[web.1]: break_start_as_date=?,
+2025-02-10T14:46:42.664910+00:00 app[web.1]: date=?,
+2025-02-10T14:46:42.664910+00:00 app[web.1]: deleted_at=?,
+2025-02-10T14:46:42.664911+00:00 app[web.1]: end_time=?,
+2025-02-10T14:46:42.664911+00:00 app[web.1]: end_time_as_date=?,
+2025-02-10T14:46:42.664911+00:00 app[web.1]: overtime_minutes=?,
+2025-02-10T14:46:42.664911+00:00 app[web.1]: start_time=?,
+2025-02-10T14:46:42.664911+00:00 app[web.1]: start_time_as_date=?,
+2025-02-10T14:46:42.664912+00:00 app[web.1]: updated_at=?,
+2025-02-10T14:46:42.664912+00:00 app[web.1]: user_id=?
+2025-02-10T14:46:42.664912+00:00 app[web.1]: where
+2025-02-10T14:46:42.664912+00:00 app[web.1]: id=?
+2025-02-10T14:46:42.664912+00:00 app[web.1]: 
+2025-02-10T14:46:42.967017+00:00 app[web.1]: 2025-02-10 23:46:42,965 DEBG 'web' stdout output:
+2025-02-10T14:46:42.967031+00:00 app[web.1]: 2025-02-10T23:46:42.964+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.service.SalaryService      : [INFO] User → byte[] コンバーターが正常に登録されています。
+2025-02-10T14:46:42.967032+00:00 app[web.1]: 
+2025-02-10T14:46:42.967032+00:00 app[web.1]: 2025-02-10 23:46:42,965 DEBG 'web' stdout output:
+2025-02-10T14:46:42.967033+00:00 app[web.1]: 2025-02-10T23:46:42.965+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.service.SalaryService      : [INFO] byte[] → User コンバーターが正常に登録されています。
+2025-02-10T14:46:42.967033+00:00 app[web.1]: 
+2025-02-10T14:46:42.967033+00:00 app[web.1]: 2025-02-10 23:46:42,965 DEBG 'web' stdout output:
+2025-02-10T14:46:42.967034+00:00 app[web.1]: 2025-02-10T23:46:42.965+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] j.c.e.config.UserToByteArrayConverter    : [INFO] UserToByteArrayConverter.javaのconvert()が呼ばれました。user: User{id=2, username=user, department=採用部}, 呼び出し元: jp.co.example.config.UserToByteArrayConverter.convert@30
+2025-02-10T14:46:42.967034+00:00 app[web.1]: 
+2025-02-10T14:46:42.967034+00:00 app[web.1]: 2025-02-10 23:46:42,966 DEBG 'web' stdout output:
+2025-02-10T14:46:42.967037+00:00 app[web.1]: 2025-02-10T23:46:42.966+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] j.c.e.config.UserFromByteArrayConverter  : [INFO] UserFromByteArrayConverter.javaのconvert()が呼ばれました。byte[]: [123, 10, 32, 32, 34, 105, 100, 34, 32, 58, 32, 50, 44, 10, 32, 32, 34, 117, 115, 101, 114, 110, 97, 109, 101, 34, 32, 58, 32, 34, 117, 115, 101, 114, 34, 44, 10, 32, 32, 34, 101, 109, 97, 105, 108, 34, 32, 58, 32, 34, 117, 117, 117, 117, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109, 34, 44, 10, 32, 32, 34, 112, 97, 115, 115, 119, 111, 114, 100, 34, 32, 58, 32, 34, 36, 50, 97, 36, 49, 48, 36, 75, 71, 66, 122, 108, 86, 108, 84, 49, 109, 55, 89, 82, 69, 85, 103, 54, 74, 90, 54, 109, 79, 84, 115, 116, 46, 118, 100, 87, 100, 85, 110, 79, 107, 106, 104, 120, 72, 81, 80, 88, 85, 77, 122, 50, 89, 70, 106, 56, 100, 52, 76, 97, 34, 44, 10, 32, 32, 34, 100, 111, 98, 34, 32, 58, 32, 34, 49, 57, 57, 54, 45, 48, 52, 45, 49, 51, 34, 44, 10, 32, 32, 34, 103, 101, 110, 100, 101, 114, 34, 32, 58, 32, 34, -25, -108, -73, -26, -128, -89, 34, 44, 10, 32, 32, 34, 112, 104, 111, 110, 101, 34, 32, 58, 32, 34, 48, 56, 48, 45, 49, 49, 50, 50, 45, 51, 51, 52, 52, 34, 44, 10, 32, 32, 34, 97, 100, 100, 114, 101, 115, 115, 34, 32, 58, 32, 34, -26, -99, -79, -28, -70, -84, -23, -125, -67, -27, -115, -125, -28, -69, -93, -25, -108, -80, -27, -116, -70, -27, -115, -125, -28, -69, -93, -25, -108, -80, 34, 44, 10, 32, 32, 34, 114, 111, 108, 101, 34, 32, 58, 32, 34, -23, -125, -88, -23, -106, -128, -23, -107, -73, 34, 44, 10, 32, 32, 34, 115, 116, 97, 116, 117, 115, 34, 32, 58, 32, 34, -27, -100, -88, -24, -127, -73, -28, -72, -83, 34, 44, 10, 32, 32, 34, 112, 111, 115, 116, 97, 108, 67, 111, 100, 101, 34, 32, 58, 32, 34, 49, 48, 48, 45, 48, 48, 48, 49, 34, 44, 10, 32, 32, 34, 97, 103, 101, 34, 32, 58, 32, 50, 56, 10, 125], 呼び出し元: jp.co.example.config.UserFromByteArrayConverter.convert@34
+2025-02-10T14:46:42.967037+00:00 app[web.1]: 
+2025-02-10T14:46:42.967367+00:00 app[web.1]: 2025-02-10 23:46:42,967 DEBG 'web' stdout output:
+2025-02-10T14:46:42.967369+00:00 app[web.1]: 2025-02-10T23:46:42.967+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのgetSalaryByUserAndPaymentMonthが呼ばれました。userId: 2, YearMonth: 2025-02
+2025-02-10T14:46:42.967370+00:00 app[web.1]: 
+2025-02-10T14:46:42.968511+00:00 app[web.1]: 2025-02-10 23:46:42,968 DEBG 'web' stdout output:
+2025-02-10T14:46:42.968512+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:42.968512+00:00 app[web.1]: select
+2025-02-10T14:46:42.968513+00:00 app[web.1]: s1_0.id,
+2025-02-10T14:46:42.968513+00:00 app[web.1]: s1_0.allowances,
+2025-02-10T14:46:42.968514+00:00 app[web.1]: s1_0.basic_salary,
+2025-02-10T14:46:42.968514+00:00 app[web.1]: s1_0.deductions,
+2025-02-10T14:46:42.968515+00:00 app[web.1]: s1_0.employment_insurance,
+2025-02-10T14:46:42.968515+00:00 app[web.1]: s1_0.health_insurance,
+2025-02-10T14:46:42.968515+00:00 app[web.1]: s1_0.overtime_hours,
+2025-02-10T14:46:42.968516+00:00 app[web.1]: s1_0.overtime_minutes,
+2025-02-10T14:46:42.968516+00:00 app[web.1]: s1_0.overtime_pay,
+2025-02-10T14:46:42.968516+00:00 app[web.1]: s1_0.payment_date,
+2025-02-10T14:46:42.968516+00:00 app[web.1]: s1_0.payment_month,
+2025-02-10T14:46:42.968517+00:00 app[web.1]: s1_0.pension,
+2025-02-10T14:46:42.968517+00:00 app[web.1]: s1_0.total_salary,
+2025-02-10T14:46:42.968518+00:00 app[web.1]: s1_0.user_id
+2025-02-10T14:46:42.968518+00:00 app[web.1]: from
+2025-02-10T14:46:42.968518+00:00 app[web.1]: salaries s1_0
+2025-02-10T14:46:42.968518+00:00 app[web.1]: where
+2025-02-10T14:46:42.968519+00:00 app[web.1]: s1_0.user_id=?
+2025-02-10T14:46:42.968519+00:00 app[web.1]: and s1_0.payment_month=?
+2025-02-10T14:46:42.968519+00:00 app[web.1]: 
+2025-02-10T14:46:43.118941+00:00 app[web.1]: 2025-02-10 23:46:43,118 DEBG 'web' stdout output:
+2025-02-10T14:46:43.118942+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:43.118942+00:00 app[web.1]: select
+2025-02-10T14:46:43.118943+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:43.118943+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:43.118944+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:43.118944+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:43.118944+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:43.118945+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:46:43.118945+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:43.118945+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:43.118945+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:43.118946+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:43.118946+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:43.118946+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:43.118946+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:43.118946+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:43.118947+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:43.118947+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:43.118947+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:43.118947+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:43.118948+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:43.118948+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:43.118948+00:00 app[web.1]: from
+2025-02-10T14:46:43.118948+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:43.118948+00:00 app[web.1]: join
+2025-02-10T14:46:43.118949+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:43.118949+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:46:43.118950+00:00 app[web.1]: where
+2025-02-10T14:46:43.118950+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:46:43.118950+00:00 app[web.1]: 
+2025-02-10T14:46:43.268168+00:00 app[web.1]: 2025-02-10 23:46:43,268 DEBG 'web' stdout output:
+2025-02-10T14:46:43.268180+00:00 app[web.1]: 2025-02-10T23:46:43.118+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.service.SalaryService      : [INFO] 給与情報が見つかりました: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:46:43.268181+00:00 app[web.1]: 
+2025-02-10T14:46:43.268293+00:00 app[web.1]: 2025-02-10 23:46:43,268 DEBG 'web' stdout output:
+2025-02-10T14:46:43.268298+00:00 app[web.1]: 2025-02-10T23:46:43.268+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.service.SalaryService      : [INFO] 給与はすでに計算されています。再計算をスキップします。既存の給与: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:46:43.268298+00:00 app[web.1]: 
+2025-02-10T14:46:43.507048+00:00 heroku[router]: at=info method=POST path="/attendance/forceEnd" host=humanage-app-1fe93ce442da.herokuapp.com request_id=296a3462-c345-4c44-b675-1bd4c1f5cb68 fwd="119.228.142.109" dyno=web.1 connect=0ms service=2260ms status=302 bytes=286 protocol=https
+2025-02-10T14:46:43.764852+00:00 app[web.1]: 2025-02-10 23:46:43,764 DEBG 'web' stdout output:
+2025-02-10T14:46:43.764865+00:00 app[web.1]: 2025-02-10T23:46:43.764+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@5900f9aa, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@5176910b, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:43.764866+00:00 app[web.1]: 
+2025-02-10T14:46:43.792471+00:00 app[web.1]: 2025-02-10 23:46:43,792 DEBG 'web' stdout output:
+2025-02-10T14:46:43.792473+00:00 app[web.1]: 2025-02-10T23:46:43.791+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.c.e.controller.AttendanceController    : [INFO] AttendanceController.javaのshowAttendanceManagementが呼ばれました。year: null, month: null, model: {}
+2025-02-10T14:46:43.792476+00:00 app[web.1]: 2025-02-10T23:46:43.791+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.service.UserService        : [INFO] UserService.javaのgetAllUsers() メソッドが呼び出されました。Supabaseからユーザーデータを取得中...
+2025-02-10T14:46:43.792477+00:00 app[web.1]: 2025-02-10T23:46:43.791+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.service.UserService        : [INFO] validateSupabaseConnectionが呼ばれました。Supabase接続を検証中...
+2025-02-10T14:46:43.792477+00:00 app[web.1]: 
+2025-02-10T14:46:43.794251+00:00 app[web.1]: 2025-02-10 23:46:43,794 DEBG 'web' stdout output:
+2025-02-10T14:46:43.794252+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:43.794252+00:00 app[web.1]: select
+2025-02-10T14:46:43.794253+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:43.794254+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:43.794254+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:43.794254+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:43.794255+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:43.794255+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:43.794255+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:43.794255+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:43.794256+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:43.794256+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:43.794256+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:43.794256+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:43.794257+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:43.794257+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:43.794257+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:43.794257+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:43.794258+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:43.794258+00:00 app[web.1]: from
+2025-02-10T14:46:43.794258+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:43.794258+00:00 app[web.1]: 
+2025-02-10T14:46:43.943721+00:00 app[web.1]: 2025-02-10 23:46:43,943 DEBG 'web' stdout output:
+2025-02-10T14:46:43.943723+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:43.943723+00:00 app[web.1]: select
+2025-02-10T14:46:43.943724+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:43.943724+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:43.943725+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:43.943725+00:00 app[web.1]: from
+2025-02-10T14:46:43.943726+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:43.943726+00:00 app[web.1]: where
+2025-02-10T14:46:43.943726+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:43.943726+00:00 app[web.1]: 
+2025-02-10T14:46:44.093048+00:00 app[web.1]: 2025-02-10 23:46:44,092 DEBG 'web' stdout output:
+2025-02-10T14:46:44.093063+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:44.093064+00:00 app[web.1]: select
+2025-02-10T14:46:44.093065+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:44.093065+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:44.093065+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:44.093066+00:00 app[web.1]: from
+2025-02-10T14:46:44.093066+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:44.093066+00:00 app[web.1]: where
+2025-02-10T14:46:44.093066+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:44.093067+00:00 app[web.1]: 
+2025-02-10T14:46:44.242546+00:00 app[web.1]: 2025-02-10 23:46:44,242 DEBG 'web' stdout output:
+2025-02-10T14:46:44.242548+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:44.242548+00:00 app[web.1]: select
+2025-02-10T14:46:44.242549+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:46:44.242549+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:46:44.242550+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:46:44.242550+00:00 app[web.1]: from
+2025-02-10T14:46:44.242550+00:00 app[web.1]: departments d1_0
+2025-02-10T14:46:44.242551+00:00 app[web.1]: where
+2025-02-10T14:46:44.242551+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:46:44.242551+00:00 app[web.1]: 
+2025-02-10T14:46:44.398417+00:00 app[web.1]: 2025-02-10 23:46:44,398 DEBG 'web' stdout output:
+2025-02-10T14:46:44.398428+00:00 app[web.1]: 2025-02-10T23:46:44.392+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.service.UserService        : [INFO] Supabaseからユーザーデータを正常に取得しました。
+2025-02-10T14:46:44.398429+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:44.398429+00:00 app[web.1]: select
+2025-02-10T14:46:44.398430+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:46:44.398430+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:46:44.398431+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:46:44.398431+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:46:44.398431+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:46:44.398432+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:46:44.398432+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:46:44.398432+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:46:44.398432+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:46:44.398433+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:46:44.398433+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:46:44.398433+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:46:44.398433+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:46:44.398433+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:46:44.398433+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:46:44.398434+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:46:44.398434+00:00 app[web.1]: u1_0.username
+2025-02-10T14:46:44.398434+00:00 app[web.1]: from
+2025-02-10T14:46:44.398434+00:00 app[web.1]: users u1_0
+2025-02-10T14:46:44.398435+00:00 app[web.1]: 
+2025-02-10T14:46:44.545470+00:00 app[web.1]: 2025-02-10 23:46:44,545 DEBG 'web' stdout output:
+2025-02-10T14:46:44.545477+00:00 app[web.1]: 2025-02-10T23:46:44.545+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.service.UserService        : [INFO] 取得したユーザー数: 4, ユーザーリスト: [User{id=2, username=user, department=採用部}, User{id=1, username=admin, department=人事部}, User{id=11, username=sss, department=営業部}, User{id=13, username=aaa, department=採用部}]
+2025-02-10T14:46:44.545477+00:00 app[web.1]: 
+2025-02-10T14:46:44.694727+00:00 app[web.1]: 2025-02-10 23:46:44,694 DEBG 'web' stdout output:
+2025-02-10T14:46:44.694739+00:00 app[web.1]: 2025-02-10T23:46:44.694+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのfindAttendanceByUserAndDateが呼ばれました。user: User{id=1, username=admin, department=No Department}, date: 2025-02-10
+2025-02-10T14:46:44.694740+00:00 app[web.1]: 
+2025-02-10T14:46:44.696172+00:00 app[web.1]: 2025-02-10 23:46:44,696 DEBG 'web' stdout output:
+2025-02-10T14:46:44.696173+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:44.696173+00:00 app[web.1]: select
+2025-02-10T14:46:44.696174+00:00 app[web.1]: a1_0.id,
+2025-02-10T14:46:44.696174+00:00 app[web.1]: a1_0.break_end,
+2025-02-10T14:46:44.696175+00:00 app[web.1]: a1_0.break_end_as_date,
+2025-02-10T14:46:44.696175+00:00 app[web.1]: a1_0.break_start,
+2025-02-10T14:46:44.696176+00:00 app[web.1]: a1_0.break_start_as_date,
+2025-02-10T14:46:44.696176+00:00 app[web.1]: a1_0.created_at,
+2025-02-10T14:46:44.696177+00:00 app[web.1]: a1_0.date,
+2025-02-10T14:46:44.696177+00:00 app[web.1]: a1_0.deleted_at,
+2025-02-10T14:46:44.696178+00:00 app[web.1]: a1_0.end_time,
+2025-02-10T14:46:44.696178+00:00 app[web.1]: a1_0.end_time_as_date,
+2025-02-10T14:46:44.696178+00:00 app[web.1]: a1_0.overtime_minutes,
+2025-02-10T14:46:44.696178+00:00 app[web.1]: a1_0.start_time,
+2025-02-10T14:46:44.696179+00:00 app[web.1]: a1_0.start_time_as_date,
+2025-02-10T14:46:44.696179+00:00 app[web.1]: a1_0.updated_at,
+2025-02-10T14:46:44.696181+00:00 app[web.1]: a1_0.user_id
+2025-02-10T14:46:44.696181+00:00 app[web.1]: from
+2025-02-10T14:46:44.696182+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:44.696182+00:00 app[web.1]: where
+2025-02-10T14:46:44.696182+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:44.696182+00:00 app[web.1]: and a1_0.date=?
+2025-02-10T14:46:44.696183+00:00 app[web.1]: 
+2025-02-10T14:46:44.846121+00:00 app[web.1]: 2025-02-10 23:46:44,845 DEBG 'web' stdout output:
+2025-02-10T14:46:44.846123+00:00 app[web.1]: 2025-02-10T23:46:44.845+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.c.e.controller.AttendanceController    : [INFO] 出勤開始: 2025-02-10T09:04:52.558776
+2025-02-10T14:46:44.846124+00:00 app[web.1]: 
+2025-02-10T14:46:44.846124+00:00 app[web.1]: 2025-02-10 23:46:44,845 DEBG 'web' stdout output:
+2025-02-10T14:46:44.846124+00:00 app[web.1]: 2025-02-10T23:46:44.845+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.c.e.controller.AttendanceController    : [INFO] 休憩開始: 2025-02-10T09:05:02.295185
+2025-02-10T14:46:44.846125+00:00 app[web.1]: 2025-02-10T23:46:44.845+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.c.e.controller.AttendanceController    : [INFO] 休憩終了: 2025-02-10T11:52:44.721459
+2025-02-10T14:46:44.846125+00:00 app[web.1]: 2025-02-10T23:46:44.845+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.c.e.controller.AttendanceController    : [INFO] 退勤時間: 2025-02-10T23:46:18.619799
+2025-02-10T14:46:44.846125+00:00 app[web.1]: 
+2025-02-10T14:46:44.846126+00:00 app[web.1]: 2025-02-10 23:46:44,846 DEBG 'web' stdout output:
+2025-02-10T14:46:44.846130+00:00 app[web.1]: 2025-02-10T23:46:44.845+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.service.AttendanceService   : [INFO] hasUnfinishedWorkが呼ばれました。User: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:44.846131+00:00 app[web.1]: 
+2025-02-10T14:46:44.847938+00:00 app[web.1]: 2025-02-10 23:46:44,847 DEBG 'web' stdout output:
+2025-02-10T14:46:44.847940+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:44.847940+00:00 app[web.1]: select
+2025-02-10T14:46:44.847941+00:00 app[web.1]: a1_0.id
+2025-02-10T14:46:44.847941+00:00 app[web.1]: from
+2025-02-10T14:46:44.847942+00:00 app[web.1]: attendance a1_0
+2025-02-10T14:46:44.847942+00:00 app[web.1]: where
+2025-02-10T14:46:44.847942+00:00 app[web.1]: a1_0.user_id=?
+2025-02-10T14:46:44.847943+00:00 app[web.1]: and a1_0.end_time is null
+2025-02-10T14:46:44.847943+00:00 app[web.1]: and a1_0.date<?
+2025-02-10T14:46:44.847943+00:00 app[web.1]: fetch
+2025-02-10T14:46:44.847944+00:00 app[web.1]: first ? rows only
+2025-02-10T14:46:44.847944+00:00 app[web.1]: 
+2025-02-10T14:46:44.999050+00:00 app[web.1]: 2025-02-10 23:46:44,997 DEBG 'web' stdout output:
+2025-02-10T14:46:44.999064+00:00 app[web.1]: 2025-02-10T23:46:44.996+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのfindAttendanceByUserAndYearMonth関数が呼ばれました。user: User{id=1, username=admin, department=No Department}, year: 2025, month: 2
+2025-02-10T14:46:44.999065+00:00 app[web.1]: 
+2025-02-10T14:46:44.999065+00:00 app[web.1]: 2025-02-10 23:46:44,998 DEBG 'web' stdout output:
+2025-02-10T14:46:44.999066+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:44.999066+00:00 app[web.1]: SELECT
+2025-02-10T14:46:44.999066+00:00 app[web.1]: *
+2025-02-10T14:46:44.999066+00:00 app[web.1]: FROM
+2025-02-10T14:46:44.999067+00:00 app[web.1]: attendance
+2025-02-10T14:46:44.999067+00:00 app[web.1]: WHERE
+2025-02-10T14:46:44.999067+00:00 app[web.1]: user_id = ?
+2025-02-10T14:46:44.999068+00:00 app[web.1]: AND EXTRACT(YEAR FROM date) = ?
+2025-02-10T14:46:44.999068+00:00 app[web.1]: AND EXTRACT(MONTH FROM date) = ?
+2025-02-10T14:46:44.999069+00:00 app[web.1]: 
+2025-02-10T14:46:45.150987+00:00 app[web.1]: 2025-02-10 23:46:45,150 DEBG 'web' stdout output:
+2025-02-10T14:46:45.150989+00:00 app[web.1]: 2025-02-10T23:46:45.150+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.service.AttendanceService   : [INFO] AttendanceService.javaのgetAvailableYearsが呼ばれました。user: User{id=1, username=admin, department=No Department}
+2025-02-10T14:46:45.150989+00:00 app[web.1]: 
+2025-02-10T14:46:45.151989+00:00 app[web.1]: 2025-02-10 23:46:45,151 DEBG 'web' stdout output:
+2025-02-10T14:46:45.151991+00:00 app[web.1]: Hibernate:
+2025-02-10T14:46:45.151991+00:00 app[web.1]: SELECT
+2025-02-10T14:46:45.151992+00:00 app[web.1]: DISTINCT EXTRACT(YEAR FROM date)
+2025-02-10T14:46:45.151992+00:00 app[web.1]: FROM
+2025-02-10T14:46:45.151993+00:00 app[web.1]: attendance
+2025-02-10T14:46:45.151993+00:00 app[web.1]: WHERE
+2025-02-10T14:46:45.151993+00:00 app[web.1]: user_id = ?
+2025-02-10T14:46:45.151994+00:00 app[web.1]: ORDER BY
+2025-02-10T14:46:45.151994+00:00 app[web.1]: EXTRACT(YEAR FROM date)
+2025-02-10T14:46:45.151994+00:00 app[web.1]: 
+2025-02-10T14:46:45.333540+00:00 heroku[router]: at=info method=GET path="/attendanceManagement" host=humanage-app-1fe93ce442da.herokuapp.com request_id=5fa048b3-7fd4-482a-8b07-60ae058c4234 fwd="119.228.142.109" dyno=web.1 connect=0ms service=1570ms status=200 bytes=1831 protocol=https
+2025-02-10T14:46:48.186171+00:00 heroku[router]: at=info method=GET path="/top" host=humanage-app-1fe93ce442da.herokuapp.com request_id=bf02a126-f20c-454f-b06b-fc3e0df4f8de fwd="119.228.142.109" dyno=web.1 connect=0ms service=31ms status=200 bytes=910 protocol=https
+2025-02-10T14:46:48.157206+00:00 app[web.1]: 2025-02-10 23:46:48,157 DEBG 'web' stdout output:
+2025-02-10T14:46:48.157217+00:00 app[web.1]: 2025-02-10T23:46:48.156+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-8] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@439ec3db, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@6a1746fa, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:46:48.157218+00:00 app[web.1]: 
+2025-02-10T14:46:22.000000+00:00 app[heroku-redis]: source=REDIS addon=redis-amorphous-85779 sample#active-connections=4 sample#max-connections=18 sample#connection-percentage-used=0.22222 sample#load-avg-1m=10.3 sample#load-avg-5m=11.48 sample#load-avg-15m=11.31 sample#read-iops=0 sample#write-iops=0 sample#max-iops=3000 sample#iops-percentage-used=0.00000 sample#memory-total=16070672kB sample#memory-free=9978064kB sample#memory-percentage-used=0.37911 sample#memory-cached=2277408kB sample#memory-redis=836608bytes sample#hit-rate=0.98246 sample#evicted-keys=0
+2025-02-10T14:47:07.398369+00:00 app[web.1]: 2025-02-10 23:47:07,398 DEBG 'pdf-server' stdout output:
+2025-02-10T14:47:07.398381+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:47:07.398382+00:00 app[web.1]: rss: 72769536,
+2025-02-10T14:47:07.398382+00:00 app[web.1]: heapTotal: 18690048,
+2025-02-10T14:47:07.398382+00:00 app[web.1]: heapUsed: 16765192,
+2025-02-10T14:47:07.398382+00:00 app[web.1]: external: 4716492,
+2025-02-10T14:47:07.398383+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:47:07.398383+00:00 app[web.1]: }
+2025-02-10T14:47:07.398384+00:00 app[web.1]: 
+2025-02-10T14:47:07.804092+00:00 app[web.1]: 2025-02-10 23:47:07,804 DEBG 'release' stdout output:
+2025-02-10T14:47:07.804104+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:47:07.804104+00:00 app[web.1]: rss: 76890112,
+2025-02-10T14:47:07.804105+00:00 app[web.1]: heapTotal: 18427904,
+2025-02-10T14:47:07.804105+00:00 app[web.1]: heapUsed: 16843624,
+2025-02-10T14:47:07.804105+00:00 app[web.1]: external: 4716492,
+2025-02-10T14:47:07.804105+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:47:07.804106+00:00 app[web.1]: }
+2025-02-10T14:47:07.804106+00:00 app[web.1]: 
+2025-02-10T14:47:29.631263+00:00 app[web.1]: 2025-02-10 23:47:29,630 DEBG 'web' stdout output:
+2025-02-10T14:47:29.631274+00:00 app[web.1]: 2025-02-10T23:47:29.630+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@7d970389, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@65bc4b57, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:47:29.631275+00:00 app[web.1]: 
+2025-02-10T14:47:29.651628+00:00 app[web.1]: 2025-02-10 23:47:29,649 DEBG 'web' stdout output:
+2025-02-10T14:47:29.651634+00:00 app[web.1]: 2025-02-10T23:47:29.642+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] j.c.e.controller.ManagementController    : [INFO] showPayrollManagementが呼ばれました。selectedMonth: null, employeeSearch: null
+2025-02-10T14:47:29.651634+00:00 app[web.1]: 
+2025-02-10T14:47:29.806272+00:00 app[web.1]: 2025-02-10 23:47:29,806 DEBG 'web' stdout output:
+2025-02-10T14:47:29.806273+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:29.806274+00:00 app[web.1]: select
+2025-02-10T14:47:29.806275+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:47:29.806275+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:47:29.806276+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:47:29.806276+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:47:29.806276+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:47:29.806276+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:47:29.806277+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:47:29.806277+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:47:29.806278+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:47:29.806278+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:47:29.806278+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:47:29.806278+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:47:29.806279+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:47:29.806279+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:47:29.806279+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:47:29.806280+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:47:29.806280+00:00 app[web.1]: u1_0.username
+2025-02-10T14:47:29.806280+00:00 app[web.1]: from
+2025-02-10T14:47:29.806280+00:00 app[web.1]: users u1_0
+2025-02-10T14:47:29.806280+00:00 app[web.1]: order by
+2025-02-10T14:47:29.806281+00:00 app[web.1]: u1_0.username
+2025-02-10T14:47:29.806281+00:00 app[web.1]: 
+2025-02-10T14:47:29.956014+00:00 app[web.1]: 2025-02-10 23:47:29,955 DEBG 'web' stdout output:
+2025-02-10T14:47:29.956027+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:29.956028+00:00 app[web.1]: select
+2025-02-10T14:47:29.956028+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:47:29.956029+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:47:29.956029+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:47:29.956029+00:00 app[web.1]: from
+2025-02-10T14:47:29.956029+00:00 app[web.1]: departments d1_0
+2025-02-10T14:47:29.956030+00:00 app[web.1]: where
+2025-02-10T14:47:29.956030+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:47:29.956030+00:00 app[web.1]: 
+2025-02-10T14:47:30.106907+00:00 app[web.1]: 2025-02-10 23:47:30,106 DEBG 'web' stdout output:
+2025-02-10T14:47:30.106908+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:30.106908+00:00 app[web.1]: select
+2025-02-10T14:47:30.106909+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:47:30.106909+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:47:30.106910+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:47:30.106910+00:00 app[web.1]: from
+2025-02-10T14:47:30.106910+00:00 app[web.1]: departments d1_0
+2025-02-10T14:47:30.106910+00:00 app[web.1]: where
+2025-02-10T14:47:30.106910+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:47:30.106911+00:00 app[web.1]: 
+2025-02-10T14:47:30.260264+00:00 app[web.1]: 2025-02-10 23:47:30,259 DEBG 'web' stdout output:
+2025-02-10T14:47:30.260269+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:30.260269+00:00 app[web.1]: select
+2025-02-10T14:47:30.260271+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:47:30.260272+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:47:30.260273+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:47:30.260273+00:00 app[web.1]: from
+2025-02-10T14:47:30.260274+00:00 app[web.1]: departments d1_0
+2025-02-10T14:47:30.260274+00:00 app[web.1]: where
+2025-02-10T14:47:30.260274+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:47:30.260275+00:00 app[web.1]: 
+2025-02-10T14:47:30.562940+00:00 app[web.1]: 2025-02-10 23:47:30,562 DEBG 'web' stdout output:
+2025-02-10T14:47:30.562953+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:30.562953+00:00 app[web.1]: SELECT
+2025-02-10T14:47:30.562953+00:00 app[web.1]: *
+2025-02-10T14:47:30.562953+00:00 app[web.1]: FROM
+2025-02-10T14:47:30.562957+00:00 app[web.1]: salaries
+2025-02-10T14:47:30.562957+00:00 app[web.1]: WHERE
+2025-02-10T14:47:30.562958+00:00 app[web.1]: payment_month = ?
+2025-02-10T14:47:30.562958+00:00 app[web.1]: 
+2025-02-10T14:47:30.714265+00:00 app[web.1]: 2025-02-10 23:47:30,714 DEBG 'web' stdout output:
+2025-02-10T14:47:30.714270+00:00 app[web.1]: 2025-02-10T23:47:30.713+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのgetSalariesByMonthが呼ばれました。Month: 2025-02
+2025-02-10T14:47:30.714270+00:00 app[web.1]: 
+2025-02-10T14:47:30.715432+00:00 app[web.1]: 2025-02-10 23:47:30,715 DEBG 'web' stdout output:
+2025-02-10T14:47:30.715434+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:30.715434+00:00 app[web.1]: SELECT
+2025-02-10T14:47:30.715434+00:00 app[web.1]: *
+2025-02-10T14:47:30.715434+00:00 app[web.1]: FROM
+2025-02-10T14:47:30.715435+00:00 app[web.1]: salaries
+2025-02-10T14:47:30.715435+00:00 app[web.1]: WHERE
+2025-02-10T14:47:30.715436+00:00 app[web.1]: payment_month = ?
+2025-02-10T14:47:30.715437+00:00 app[web.1]: 
+2025-02-10T14:47:31.171199+00:00 app[web.1]: 2025-02-10 23:47:31,168 DEBG 'web' stdout output:
+2025-02-10T14:47:31.171213+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:31.171213+00:00 app[web.1]: select
+2025-02-10T14:47:31.171214+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:47:31.171214+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:47:31.171215+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:47:31.171215+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:47:31.171215+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:47:31.171216+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:47:31.171216+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:47:31.171216+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:47:31.171217+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:47:31.171217+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:47:31.171217+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:47:31.171217+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:47:31.171218+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:47:31.171218+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:47:31.171218+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:47:31.171218+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:47:31.171218+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:47:31.171219+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:47:31.171219+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:47:31.171219+00:00 app[web.1]: u1_0.username
+2025-02-10T14:47:31.171219+00:00 app[web.1]: from
+2025-02-10T14:47:31.171219+00:00 app[web.1]: users u1_0
+2025-02-10T14:47:31.171220+00:00 app[web.1]: join
+2025-02-10T14:47:31.171220+00:00 app[web.1]: departments d1_0
+2025-02-10T14:47:31.171221+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:47:31.171221+00:00 app[web.1]: where
+2025-02-10T14:47:31.171221+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:47:31.171221+00:00 app[web.1]: 
+2025-02-10T14:47:31.472784+00:00 app[web.1]: 2025-02-10 23:47:31,472 DEBG 'web' stdout output:
+2025-02-10T14:47:31.472805+00:00 app[web.1]: 2025-02-10T23:47:31.015+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのcalculateDeductionsが呼ばれました。Salaryオブジェクトを確認します: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:47:31.472805+00:00 app[web.1]: 
+2025-02-10T14:47:31.473520+00:00 app[web.1]: 2025-02-10 23:47:31,473 DEBG 'web' stdout output:
+2025-02-10T14:47:31.473523+00:00 app[web.1]: 2025-02-10T23:47:31.473+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.service.SalaryService      : [INFO] Salaryオブジェクトに設定完了。totalDeductionsを返します: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:47:31.473524+00:00 app[web.1]: 
+2025-02-10T14:47:31.475255+00:00 app[web.1]: 2025-02-10 23:47:31,475 DEBG 'web' stdout output:
+2025-02-10T14:47:31.475257+00:00 app[web.1]: Hibernate:
+2025-02-10T14:47:31.475258+00:00 app[web.1]: select
+2025-02-10T14:47:31.475258+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:47:31.475259+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:47:31.475259+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:47:31.475259+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:47:31.475260+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:47:31.475261+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:47:31.475261+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:47:31.475261+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:47:31.475261+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:47:31.475262+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:47:31.475262+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:47:31.475262+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:47:31.475262+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:47:31.475262+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:47:31.475263+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:47:31.475263+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:47:31.475263+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:47:31.475263+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:47:31.475263+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:47:31.475263+00:00 app[web.1]: u1_0.username
+2025-02-10T14:47:31.475264+00:00 app[web.1]: from
+2025-02-10T14:47:31.475264+00:00 app[web.1]: users u1_0
+2025-02-10T14:47:31.475264+00:00 app[web.1]: join
+2025-02-10T14:47:31.475264+00:00 app[web.1]: departments d1_0
+2025-02-10T14:47:31.475265+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:47:31.475265+00:00 app[web.1]: where
+2025-02-10T14:47:31.475265+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:47:31.475265+00:00 app[web.1]: 
+2025-02-10T14:47:31.779790+00:00 app[web.1]: 2025-02-10 23:47:31,779 DEBG 'web' stdout output:
+2025-02-10T14:47:31.779818+00:00 app[web.1]: 2025-02-10T23:47:31.474+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのcalculateDeductionsが呼ばれました。Salaryオブジェクトを確認します: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:47:31.779818+00:00 app[web.1]: 
+2025-02-10T14:47:31.780002+00:00 app[web.1]: 2025-02-10 23:47:31,779 DEBG 'web' stdout output:
+2025-02-10T14:47:31.780004+00:00 app[web.1]: 2025-02-10T23:47:31.779+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.service.SalaryService      : [INFO] Salaryオブジェクトに設定完了。totalDeductionsを返します: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:47:31.780005+00:00 app[web.1]: 
+2025-02-10T14:47:35.211284+00:00 heroku[router]: at=info method=GET path="/payroll" host=humanage-app-1fe93ce442da.herokuapp.com request_id=7b30b8ed-51ea-47c8-a2e0-f1f809be1301 fwd="119.228.142.109" dyno=web.1 connect=0ms service=5582ms status=200 bytes=1363 protocol=https
+2025-02-10T14:47:35.805918+00:00 app[web.1]: 2025-02-10 23:47:35,805 DEBG 'web' stdout output:
+2025-02-10T14:47:35.805933+00:00 app[web.1]: 2025-02-10T23:47:35.805+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-2] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@2228325e, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@74d68e33, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:47:35.805934+00:00 app[web.1]: 
+2025-02-10T14:47:36.333221+00:00 heroku[router]: at=info method=GET path="/css/payroll_management.css" host=humanage-app-1fe93ce442da.herokuapp.com request_id=6ecf4d2a-ef8c-4228-ad0d-e899a6b50378 fwd="119.228.142.109" dyno=web.1 connect=0ms service=529ms status=200 bytes=1573 protocol=https
+2025-02-10T14:47:25.000000+00:00 app[heroku-redis]: source=REDIS addon=redis-amorphous-85779 sample#active-connections=4 sample#max-connections=18 sample#connection-percentage-used=0.22222 sample#load-avg-1m=10.49 sample#load-avg-5m=10.88 sample#load-avg-15m=11.095 sample#read-iops=0 sample#write-iops=0 sample#max-iops=3000 sample#iops-percentage-used=0.00000 sample#memory-total=16070672kB sample#memory-free=9985020kB sample#memory-percentage-used=0.37868 sample#memory-cached=2277508kB sample#memory-redis=816136bytes sample#hit-rate=0.98246 sample#evicted-keys=0
+2025-02-10T14:48:07.428737+00:00 app[web.1]: 2025-02-10 23:48:07,428 DEBG 'pdf-server' stdout output:
+2025-02-10T14:48:07.428752+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:48:07.428753+00:00 app[web.1]: rss: 72769536,
+2025-02-10T14:48:07.428753+00:00 app[web.1]: heapTotal: 18690048,
+2025-02-10T14:48:07.428753+00:00 app[web.1]: heapUsed: 16771816,
+2025-02-10T14:48:07.428753+00:00 app[web.1]: external: 4716492,
+2025-02-10T14:48:07.428754+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:48:07.428754+00:00 app[web.1]: }
+2025-02-10T14:48:07.428755+00:00 app[web.1]: 
+2025-02-10T14:48:07.832843+00:00 app[web.1]: 2025-02-10 23:48:07,832 DEBG 'release' stdout output:
+2025-02-10T14:48:07.832855+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:48:07.832856+00:00 app[web.1]: rss: 76890112,
+2025-02-10T14:48:07.832856+00:00 app[web.1]: heapTotal: 18427904,
+2025-02-10T14:48:07.832856+00:00 app[web.1]: heapUsed: 16850144,
+2025-02-10T14:48:07.832857+00:00 app[web.1]: external: 4716492,
+2025-02-10T14:48:07.832857+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:48:07.832857+00:00 app[web.1]: }
+2025-02-10T14:48:07.832858+00:00 app[web.1]: 
+2025-02-10T14:48:43.867733+00:00 app[web.1]: 2025-02-10 23:48:43,867 DEBG 'web' stdout output:
+2025-02-10T14:48:43.867749+00:00 app[web.1]: 2025-02-10T23:48:43.867+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@aae810c, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@317a82ca, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:48:43.867750+00:00 app[web.1]: 
+2025-02-10T14:48:43.911970+00:00 app[web.1]: 2025-02-10 23:48:43,911 DEBG 'web' stdout output:
+2025-02-10T14:48:43.911974+00:00 app[web.1]: 2025-02-10T23:48:43.911+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] j.c.e.controller.ManagementController    : [INFO] showSalaryManagementが呼ばれました。employeeSearch: null, selectedMonth: null, model: {}
+2025-02-10T14:48:43.911975+00:00 app[web.1]: 
+2025-02-10T14:48:44.062649+00:00 app[web.1]: 2025-02-10 23:48:44,062 DEBG 'web' stdout output:
+2025-02-10T14:48:44.062650+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:44.062651+00:00 app[web.1]: select
+2025-02-10T14:48:44.062651+00:00 app[web.1]: s1_0.id,
+2025-02-10T14:48:44.062652+00:00 app[web.1]: s1_0.allowances,
+2025-02-10T14:48:44.062653+00:00 app[web.1]: s1_0.basic_salary,
+2025-02-10T14:48:44.062653+00:00 app[web.1]: s1_0.deductions,
+2025-02-10T14:48:44.062654+00:00 app[web.1]: s1_0.employment_insurance,
+2025-02-10T14:48:44.062654+00:00 app[web.1]: s1_0.health_insurance,
+2025-02-10T14:48:44.062654+00:00 app[web.1]: s1_0.overtime_hours,
+2025-02-10T14:48:44.062655+00:00 app[web.1]: s1_0.overtime_minutes,
+2025-02-10T14:48:44.062655+00:00 app[web.1]: s1_0.overtime_pay,
+2025-02-10T14:48:44.062655+00:00 app[web.1]: s1_0.payment_date,
+2025-02-10T14:48:44.062655+00:00 app[web.1]: s1_0.payment_month,
+2025-02-10T14:48:44.062656+00:00 app[web.1]: s1_0.pension,
+2025-02-10T14:48:44.062656+00:00 app[web.1]: s1_0.total_salary,
+2025-02-10T14:48:44.062656+00:00 app[web.1]: s1_0.user_id
+2025-02-10T14:48:44.062656+00:00 app[web.1]: from
+2025-02-10T14:48:44.062658+00:00 app[web.1]: salaries s1_0
+2025-02-10T14:48:44.062659+00:00 app[web.1]: left join
+2025-02-10T14:48:44.062659+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:44.062659+00:00 app[web.1]: on u1_0.id=s1_0.user_id
+2025-02-10T14:48:44.062659+00:00 app[web.1]: where
+2025-02-10T14:48:44.062660+00:00 app[web.1]: s1_0.payment_month=?
+2025-02-10T14:48:44.062660+00:00 app[web.1]: order by
+2025-02-10T14:48:44.062660+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:44.062660+00:00 app[web.1]: 
+2025-02-10T14:48:44.512614+00:00 app[web.1]: 2025-02-10 23:48:44,512 DEBG 'web' stdout output:
+2025-02-10T14:48:44.512627+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:44.512627+00:00 app[web.1]: select
+2025-02-10T14:48:44.512628+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:48:44.512628+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:48:44.512629+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:48:44.512629+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:44.512630+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:44.512630+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:48:44.512630+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:48:44.512630+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:48:44.512630+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:48:44.512631+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:48:44.512640+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:48:44.512640+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:48:44.512641+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:48:44.512641+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:48:44.512641+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:48:44.512641+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:48:44.512642+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:48:44.512642+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:48:44.512642+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:48:44.512642+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:44.512643+00:00 app[web.1]: from
+2025-02-10T14:48:44.512643+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:44.512643+00:00 app[web.1]: join
+2025-02-10T14:48:44.512644+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:44.512644+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:48:44.512645+00:00 app[web.1]: where
+2025-02-10T14:48:44.512645+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:48:44.512645+00:00 app[web.1]: 
+2025-02-10T14:48:44.816176+00:00 app[web.1]: 2025-02-10 23:48:44,816 DEBG 'web' stdout output:
+2025-02-10T14:48:44.816200+00:00 app[web.1]: 2025-02-10T23:48:44.360+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのcalculateDeductionsが呼ばれました。Salaryオブジェクトを確認します: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:48:44.816200+00:00 app[web.1]: 
+2025-02-10T14:48:44.816265+00:00 app[web.1]: 2025-02-10 23:48:44,816 DEBG 'web' stdout output:
+2025-02-10T14:48:44.816266+00:00 app[web.1]: 2025-02-10T23:48:44.816+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.service.SalaryService      : [INFO] Salaryオブジェクトに設定完了。totalDeductionsを返します: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:48:44.816266+00:00 app[web.1]: 
+2025-02-10T14:48:44.817395+00:00 app[web.1]: 2025-02-10 23:48:44,817 DEBG 'web' stdout output:
+2025-02-10T14:48:44.817397+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:44.817397+00:00 app[web.1]: select
+2025-02-10T14:48:44.817397+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:48:44.817398+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:48:44.817398+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:48:44.817398+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:44.817399+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:44.817399+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:48:44.817399+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:48:44.817399+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:48:44.817400+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:48:44.817400+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:48:44.817400+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:48:44.817400+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:48:44.817400+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:48:44.817401+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:48:44.817401+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:48:44.817401+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:48:44.817401+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:48:44.817401+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:48:44.817401+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:48:44.817401+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:44.817402+00:00 app[web.1]: from
+2025-02-10T14:48:44.817402+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:44.817402+00:00 app[web.1]: join
+2025-02-10T14:48:44.817403+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:44.817403+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:48:44.817403+00:00 app[web.1]: where
+2025-02-10T14:48:44.817404+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:48:44.817404+00:00 app[web.1]: 
+2025-02-10T14:48:45.120676+00:00 app[web.1]: 2025-02-10 23:48:45,120 DEBG 'web' stdout output:
+2025-02-10T14:48:45.120680+00:00 app[web.1]: 2025-02-10T23:48:44.816+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのcalculateDeductionsが呼ばれました。Salaryオブジェクトを確認します: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:48:45.120680+00:00 app[web.1]: 
+2025-02-10T14:48:45.120762+00:00 app[web.1]: 2025-02-10 23:48:45,120 DEBG 'web' stdout output:
+2025-02-10T14:48:45.120763+00:00 app[web.1]: 2025-02-10T23:48:45.120+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-3] jp.co.example.service.SalaryService      : [INFO] Salaryオブジェクトに設定完了。totalDeductionsを返します: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:48:45.120763+00:00 app[web.1]: 
+2025-02-10T14:48:45.223203+00:00 heroku[router]: at=info method=GET path="/salaryManagement" host=humanage-app-1fe93ce442da.herokuapp.com request_id=eea1c2ab-c1fd-4345-9889-58d3e1a24498 fwd="119.228.142.109" dyno=web.1 connect=0ms service=1356ms status=200 bytes=1262 protocol=https
+2025-02-10T14:48:47.276806+00:00 app[web.1]: 2025-02-10 23:48:47,276 DEBG 'web' stdout output:
+2025-02-10T14:48:47.276828+00:00 app[web.1]: 2025-02-10T23:48:47.276+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@4e4af516, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@660692b3, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:48:47.276828+00:00 app[web.1]: 
+2025-02-10T14:48:47.288716+00:00 app[web.1]: 2025-02-10 23:48:47,288 DEBG 'web' stdout output:
+2025-02-10T14:48:47.288718+00:00 app[web.1]: 2025-02-10T23:48:47.288+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] j.c.e.controller.ManagementController    : [INFO] showPayrollManagementが呼ばれました。selectedMonth: null, employeeSearch: null
+2025-02-10T14:48:47.288718+00:00 app[web.1]: 
+2025-02-10T14:48:47.438746+00:00 app[web.1]: 2025-02-10 23:48:47,438 DEBG 'web' stdout output:
+2025-02-10T14:48:47.438748+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:47.438748+00:00 app[web.1]: select
+2025-02-10T14:48:47.438748+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:48:47.438748+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:48:47.438749+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:48:47.438750+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:48:47.438750+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:48:47.438750+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:48:47.438750+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:48:47.438750+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:48:47.438750+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:48:47.438750+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:48:47.438751+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:48:47.438751+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:48:47.438751+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:48:47.438751+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:48:47.438751+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:48:47.438751+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:48:47.438751+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:47.438751+00:00 app[web.1]: from
+2025-02-10T14:48:47.438752+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:47.438752+00:00 app[web.1]: order by
+2025-02-10T14:48:47.438752+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:47.438752+00:00 app[web.1]: 
+2025-02-10T14:48:47.590818+00:00 app[web.1]: 2025-02-10 23:48:47,590 DEBG 'web' stdout output:
+2025-02-10T14:48:47.590835+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:47.590835+00:00 app[web.1]: select
+2025-02-10T14:48:47.590835+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:47.590836+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:47.590836+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:48:47.590837+00:00 app[web.1]: from
+2025-02-10T14:48:47.590837+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:47.590838+00:00 app[web.1]: where
+2025-02-10T14:48:47.590838+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:48:47.590838+00:00 app[web.1]: 
+2025-02-10T14:48:47.737329+00:00 app[web.1]: 2025-02-10 23:48:47,737 DEBG 'web' stdout output:
+2025-02-10T14:48:47.737330+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:47.737331+00:00 app[web.1]: select
+2025-02-10T14:48:47.737331+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:47.737332+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:47.737332+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:48:47.737332+00:00 app[web.1]: from
+2025-02-10T14:48:47.737332+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:47.737333+00:00 app[web.1]: where
+2025-02-10T14:48:47.737333+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:48:47.737333+00:00 app[web.1]: 
+2025-02-10T14:48:47.886441+00:00 app[web.1]: 2025-02-10 23:48:47,886 DEBG 'web' stdout output:
+2025-02-10T14:48:47.886458+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:47.886459+00:00 app[web.1]: select
+2025-02-10T14:48:47.886459+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:47.886469+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:47.886469+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:48:47.886470+00:00 app[web.1]: from
+2025-02-10T14:48:47.886470+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:47.886470+00:00 app[web.1]: where
+2025-02-10T14:48:47.886470+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:48:47.886470+00:00 app[web.1]: 
+2025-02-10T14:48:48.185820+00:00 app[web.1]: 2025-02-10 23:48:48,185 DEBG 'web' stdout output:
+2025-02-10T14:48:48.185844+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:48.185844+00:00 app[web.1]: SELECT
+2025-02-10T14:48:48.185845+00:00 app[web.1]: *
+2025-02-10T14:48:48.185845+00:00 app[web.1]: FROM
+2025-02-10T14:48:48.185845+00:00 app[web.1]: salaries
+2025-02-10T14:48:48.185846+00:00 app[web.1]: WHERE
+2025-02-10T14:48:48.185847+00:00 app[web.1]: payment_month = ?
+2025-02-10T14:48:48.185847+00:00 app[web.1]: 
+2025-02-10T14:48:48.336042+00:00 app[web.1]: 2025-02-10 23:48:48,335 DEBG 'web' stdout output:
+2025-02-10T14:48:48.336052+00:00 app[web.1]: 2025-02-10T23:48:48.335+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのgetSalariesByMonthが呼ばれました。Month: 2025-02
+2025-02-10T14:48:48.336052+00:00 app[web.1]: 
+2025-02-10T14:48:48.336533+00:00 app[web.1]: 2025-02-10 23:48:48,336 DEBG 'web' stdout output:
+2025-02-10T14:48:48.336534+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:48.336535+00:00 app[web.1]: SELECT
+2025-02-10T14:48:48.336535+00:00 app[web.1]: *
+2025-02-10T14:48:48.336535+00:00 app[web.1]: FROM
+2025-02-10T14:48:48.336536+00:00 app[web.1]: salaries
+2025-02-10T14:48:48.336536+00:00 app[web.1]: WHERE
+2025-02-10T14:48:48.336537+00:00 app[web.1]: payment_month = ?
+2025-02-10T14:48:48.336537+00:00 app[web.1]: 
+2025-02-10T14:48:48.787790+00:00 app[web.1]: 2025-02-10 23:48:48,787 DEBG 'web' stdout output:
+2025-02-10T14:48:48.787803+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:48.787803+00:00 app[web.1]: select
+2025-02-10T14:48:48.787804+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:48:48.787804+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:48:48.787804+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:48:48.787804+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:48.787805+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:48.787805+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:48:48.787805+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:48:48.787805+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:48:48.787805+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:48:48.787805+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:48:48.787806+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:48:48.787807+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:48.787807+00:00 app[web.1]: from
+2025-02-10T14:48:48.787807+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:48.787807+00:00 app[web.1]: join
+2025-02-10T14:48:48.787807+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:48.787807+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:48:48.787808+00:00 app[web.1]: where
+2025-02-10T14:48:48.787808+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:48:48.787808+00:00 app[web.1]: 
+2025-02-10T14:48:49.091517+00:00 app[web.1]: 2025-02-10 23:48:49,091 DEBG 'web' stdout output:
+2025-02-10T14:48:49.091534+00:00 app[web.1]: 2025-02-10T23:48:48.635+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのcalculateDeductionsが呼ばれました。Salaryオブジェクトを確認します: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:48:49.091544+00:00 app[web.1]: 
+2025-02-10T14:48:49.091690+00:00 app[web.1]: 2025-02-10 23:48:49,091 DEBG 'web' stdout output:
+2025-02-10T14:48:49.091691+00:00 app[web.1]: 2025-02-10T23:48:49.091+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] jp.co.example.service.SalaryService      : [INFO] Salaryオブジェクトに設定完了。totalDeductionsを返します: Salary{username='user', paymentMonth=2025-02, basicSalary=150000.00, overtimePay=0.00, totalSalary=145000.00}
+2025-02-10T14:48:49.091692+00:00 app[web.1]: 
+2025-02-10T14:48:49.092633+00:00 app[web.1]: 2025-02-10 23:48:49,092 DEBG 'web' stdout output:
+2025-02-10T14:48:49.092634+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:49.092635+00:00 app[web.1]: select
+2025-02-10T14:48:49.092635+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:48:49.092636+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:48:49.092636+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:48:49.092636+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:49.092637+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:49.092637+00:00 app[web.1]: d1_0.manager_id,
+2025-02-10T14:48:49.092638+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:48:49.092638+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:48:49.092638+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:48:49.092638+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:48:49.092638+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:48:49.092639+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:48:49.092639+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:48:49.092639+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:48:49.092639+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:48:49.092639+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:48:49.092639+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:48:49.092640+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:48:49.092640+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:48:49.092640+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:49.092640+00:00 app[web.1]: from
+2025-02-10T14:48:49.092640+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:49.092640+00:00 app[web.1]: join
+2025-02-10T14:48:49.092641+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:49.092641+00:00 app[web.1]: on d1_0.id=u1_0.department_id
+2025-02-10T14:48:49.092641+00:00 app[web.1]: where
+2025-02-10T14:48:49.092642+00:00 app[web.1]: u1_0.id=?
+2025-02-10T14:48:49.092642+00:00 app[web.1]: 
+2025-02-10T14:48:49.401187+00:00 app[web.1]: 2025-02-10 23:48:49,396 DEBG 'web' stdout output:
+2025-02-10T14:48:49.401203+00:00 app[web.1]: 2025-02-10T23:48:49.092+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] jp.co.example.service.SalaryService      : [INFO] SalaryService.javaのcalculateDeductionsが呼ばれました。Salaryオブジェクトを確認します: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:48:49.401204+00:00 app[web.1]: 
+2025-02-10T14:48:49.401204+00:00 app[web.1]: 2025-02-10 23:48:49,397 DEBG 'web' stdout output:
+2025-02-10T14:48:49.401216+00:00 app[web.1]: 2025-02-10T23:48:49.396+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-1] jp.co.example.service.SalaryService      : [INFO] Salaryオブジェクトに設定完了。totalDeductionsを返します: Salary{username='admin', paymentMonth=2025-02, basicSalary=220000.00, overtimePay=0.00, totalSalary=228540.00}
+2025-02-10T14:48:49.401216+00:00 app[web.1]: 
+2025-02-10T14:48:49.417304+00:00 heroku[router]: at=info method=GET path="/payroll" host=humanage-app-1fe93ce442da.herokuapp.com request_id=91a763bc-fdcd-41ce-a0f7-c22005a3417d fwd="119.228.142.109" dyno=web.1 connect=1ms service=2144ms status=200 bytes=1363 protocol=https
+2025-02-10T14:48:29.000000+00:00 app[heroku-redis]: source=REDIS addon=redis-amorphous-85779 sample#active-connections=4 sample#max-connections=18 sample#connection-percentage-used=0.22222 sample#load-avg-1m=15.915 sample#load-avg-5m=12.3 sample#load-avg-15m=11.57 sample#read-iops=0 sample#write-iops=0 sample#max-iops=3000 sample#iops-percentage-used=0.00000 sample#memory-total=16070672kB sample#memory-free=9981600kB sample#memory-percentage-used=0.37889 sample#memory-cached=2277760kB sample#memory-redis=800880bytes sample#hit-rate=0.98462 sample#evicted-keys=0
+2025-02-10T14:48:52.318403+00:00 heroku[router]: at=info method=GET path="/top" host=humanage-app-1fe93ce442da.herokuapp.com request_id=0edfd9c6-7d7b-49f4-ad02-6c1e84a9a30c fwd="119.228.142.109" dyno=web.1 connect=0ms service=40ms status=200 bytes=910 protocol=https
+2025-02-10T14:48:52.278922+00:00 app[web.1]: 2025-02-10 23:48:52,278 DEBG 'web' stdout output:
+2025-02-10T14:48:52.278938+00:00 app[web.1]: 2025-02-10T23:48:52.278+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-4] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@79940534, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@47436af8, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:48:52.278939+00:00 app[web.1]: 
+2025-02-10T14:48:58.211475+00:00 app[web.1]: 2025-02-10 23:48:58,211 DEBG 'web' stdout output:
+2025-02-10T14:48:58.211488+00:00 app[web.1]: 2025-02-10T23:48:58.211+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@10eb75e6, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@1bb320ab, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:48:58.211488+00:00 app[web.1]: 
+2025-02-10T14:48:58.215284+00:00 app[web.1]: 2025-02-10 23:48:58,215 DEBG 'web' stdout output:
+2025-02-10T14:48:58.215286+00:00 app[web.1]: 2025-02-10T23:48:58.215+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.co.example.controller.UserController   : [INFO] initBinderが呼ばれました: org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@1649e3b4
+2025-02-10T14:48:58.215287+00:00 app[web.1]: 
+2025-02-10T14:48:58.216926+00:00 app[web.1]: 2025-02-10 23:48:58,216 DEBG 'web' stdout output:
+2025-02-10T14:48:58.216934+00:00 app[web.1]: 2025-02-10T23:48:58.216+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] j.co.example.controller.UserController   : [INFO] listUsersが呼ばれました。query: null, model: {}
+2025-02-10T14:48:58.216935+00:00 app[web.1]: 
+2025-02-10T14:48:58.365587+00:00 app[web.1]: 2025-02-10 23:48:58,365 DEBG 'web' stdout output:
+2025-02-10T14:48:58.365589+00:00 app[web.1]: 2025-02-10T23:48:58.365+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] UserService.javaのgetAllUsers() メソ��ドが呼び出されました。Supabaseからユーザーデータを取得中...
+2025-02-10T14:48:58.365589+00:00 app[web.1]: 
+2025-02-10T14:48:58.365726+00:00 app[web.1]: 2025-02-10 23:48:58,365 DEBG 'web' stdout output:
+2025-02-10T14:48:58.365727+00:00 app[web.1]: 2025-02-10T23:48:58.365+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] validateSupabaseConnectionが呼ばれました。Supabase接続を検証中...
+2025-02-10T14:48:58.365727+00:00 app[web.1]: 
+2025-02-10T14:48:58.367734+00:00 app[web.1]: 2025-02-10 23:48:58,367 DEBG 'web' stdout output:
+2025-02-10T14:48:58.367735+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:58.367736+00:00 app[web.1]: select
+2025-02-10T14:48:58.367736+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:48:58.367737+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:48:58.367737+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:48:58.367737+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:48:58.367738+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:48:58.367738+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:48:58.367738+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:48:58.367738+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:48:58.367739+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:48:58.367739+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:48:58.367739+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:48:58.367739+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:48:58.367740+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:48:58.367740+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:48:58.367740+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:48:58.367740+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:48:58.367740+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:58.367741+00:00 app[web.1]: from
+2025-02-10T14:48:58.367741+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:58.367741+00:00 app[web.1]: 
+2025-02-10T14:48:58.517179+00:00 app[web.1]: 2025-02-10 23:48:58,517 DEBG 'web' stdout output:
+2025-02-10T14:48:58.517193+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:58.517193+00:00 app[web.1]: select
+2025-02-10T14:48:58.517194+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:58.517194+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:58.517195+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:48:58.517195+00:00 app[web.1]: from
+2025-02-10T14:48:58.517195+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:58.517195+00:00 app[web.1]: where
+2025-02-10T14:48:58.517195+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:48:58.517196+00:00 app[web.1]: 
+2025-02-10T14:48:58.665548+00:00 app[web.1]: 2025-02-10 23:48:58,665 DEBG 'web' stdout output:
+2025-02-10T14:48:58.665550+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:58.665551+00:00 app[web.1]: select
+2025-02-10T14:48:58.665551+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:58.665552+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:58.665552+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:48:58.665553+00:00 app[web.1]: from
+2025-02-10T14:48:58.665553+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:58.665553+00:00 app[web.1]: where
+2025-02-10T14:48:58.665554+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:48:58.665554+00:00 app[web.1]: 
+2025-02-10T14:48:58.814695+00:00 app[web.1]: 2025-02-10 23:48:58,814 DEBG 'web' stdout output:
+2025-02-10T14:48:58.814708+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:58.814708+00:00 app[web.1]: select
+2025-02-10T14:48:58.814709+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:48:58.814709+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:48:58.814710+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:48:58.814710+00:00 app[web.1]: from
+2025-02-10T14:48:58.814710+00:00 app[web.1]: departments d1_0
+2025-02-10T14:48:58.814710+00:00 app[web.1]: where
+2025-02-10T14:48:58.814711+00:00 app[web.1]: d1_0.id=?
+2025-02-10T14:48:58.814711+00:00 app[web.1]: 
+2025-02-10T14:48:58.963528+00:00 app[web.1]: 2025-02-10 23:48:58,963 DEBG 'web' stdout output:
+2025-02-10T14:48:58.963531+00:00 app[web.1]: 2025-02-10T23:48:58.963+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] Supabaseからユーザーデータを正常に取得しました。
+2025-02-10T14:48:58.963531+00:00 app[web.1]: 
+2025-02-10T14:48:58.966415+00:00 app[web.1]: 2025-02-10 23:48:58,966 DEBG 'web' stdout output:
+2025-02-10T14:48:58.966417+00:00 app[web.1]: Hibernate:
+2025-02-10T14:48:58.966417+00:00 app[web.1]: select
+2025-02-10T14:48:58.966417+00:00 app[web.1]: u1_0.id,
+2025-02-10T14:48:58.966418+00:00 app[web.1]: u1_0.address,
+2025-02-10T14:48:58.966418+00:00 app[web.1]: u1_0.department_id,
+2025-02-10T14:48:58.966418+00:00 app[web.1]: u1_0.dob,
+2025-02-10T14:48:58.966419+00:00 app[web.1]: u1_0.email,
+2025-02-10T14:48:58.966419+00:00 app[web.1]: u1_0.gender,
+2025-02-10T14:48:58.966426+00:00 app[web.1]: u1_0.hire_date,
+2025-02-10T14:48:58.966426+00:00 app[web.1]: u1_0.last_modified_at,
+2025-02-10T14:48:58.966427+00:00 app[web.1]: u1_0.last_modified_by,
+2025-02-10T14:48:58.966427+00:00 app[web.1]: u1_0.password,
+2025-02-10T14:48:58.966427+00:00 app[web.1]: u1_0.phone,
+2025-02-10T14:48:58.966427+00:00 app[web.1]: u1_0.postal_code,
+2025-02-10T14:48:58.966428+00:00 app[web.1]: u1_0.reset_token,
+2025-02-10T14:48:58.966428+00:00 app[web.1]: u1_0.retirement_date,
+2025-02-10T14:48:58.966428+00:00 app[web.1]: u1_0.role,
+2025-02-10T14:48:58.966428+00:00 app[web.1]: u1_0.status,
+2025-02-10T14:48:58.966429+00:00 app[web.1]: u1_0.username
+2025-02-10T14:48:58.966429+00:00 app[web.1]: from
+2025-02-10T14:48:58.966429+00:00 app[web.1]: users u1_0
+2025-02-10T14:48:58.966430+00:00 app[web.1]: 
+2025-02-10T14:48:59.115120+00:00 app[web.1]: 2025-02-10 23:48:59,115 DEBG 'web' stdout output:
+2025-02-10T14:48:59.115140+00:00 app[web.1]: 2025-02-10T23:48:59.114+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-6] jp.co.example.service.UserService        : [INFO] 取得したユーザー数: 4, ユーザーリスト: [User{id=2, username=user, department=採用部}, User{id=1, username=admin, department=人事部}, User{id=11, username=sss, department=営業部}, User{id=13, username=aaa, department=採用部}]
+2025-02-10T14:48:59.115141+00:00 app[web.1]: 
+2025-02-10T14:49:01.457719+00:00 heroku[router]: at=info method=GET path="/users" host=humanage-app-1fe93ce442da.herokuapp.com request_id=10df71a3-7597-4e2b-bc45-0d3d339dceda fwd="119.228.142.109" dyno=web.1 connect=0ms service=3247ms status=200 bytes=1469 protocol=https
+2025-02-10T14:49:01.825107+00:00 app[web.1]: 2025-02-10 23:49:01,824 DEBG 'web' stdout output:
+2025-02-10T14:49:01.825119+00:00 app[web.1]: 2025-02-10T23:49:01.823+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-5] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@73e5b6a, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@5eeb8935, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:49:01.825119+00:00 app[web.1]: 
+2025-02-10T14:49:01.996855+00:00 heroku[router]: at=info method=GET path="/js/delete_confirmation.js" host=humanage-app-1fe93ce442da.herokuapp.com request_id=2f080566-a1ca-4a57-88fa-3cebdafdcfc1 fwd="119.228.142.109" dyno=web.1 connect=0ms service=174ms status=200 bytes=1367 protocol=https
+2025-02-10T14:49:03.590398+00:00 app[web.1]: 2025-02-10 23:49:03,590 DEBG 'web' stdout output:
+2025-02-10T14:49:03.590414+00:00 app[web.1]: 2025-02-10T23:49:03.590+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@66771588, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@120637ee, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:49:03.590415+00:00 app[web.1]: 
+2025-02-10T14:49:03.596153+00:00 app[web.1]: 2025-02-10 23:49:03,596 DEBG 'web' stdout output:
+2025-02-10T14:49:03.596156+00:00 app[web.1]: 2025-02-10T23:49:03.595+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.controller.UserController   : [INFO] Getのregisterが呼ばれました。model: {}
+2025-02-10T14:49:03.596157+00:00 app[web.1]: 
+2025-02-10T14:49:03.596269+00:00 app[web.1]: 2025-02-10 23:49:03,596 DEBG 'web' stdout output:
+2025-02-10T14:49:03.596270+00:00 app[web.1]: 2025-02-10T23:49:03.596+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-7] j.co.example.service.DepartmentService   : [INFO] getAllDepartmentsが呼ばれました。
+2025-02-10T14:49:03.596270+00:00 app[web.1]: 
+2025-02-10T14:49:03.746474+00:00 app[web.1]: 2025-02-10 23:49:03,746 DEBG 'web' stdout output:
+2025-02-10T14:49:03.746475+00:00 app[web.1]: Hibernate:
+2025-02-10T14:49:03.746475+00:00 app[web.1]: select
+2025-02-10T14:49:03.746476+00:00 app[web.1]: d1_0.id,
+2025-02-10T14:49:03.746476+00:00 app[web.1]: d1_0.department_name,
+2025-02-10T14:49:03.746476+00:00 app[web.1]: d1_0.manager_id
+2025-02-10T14:49:03.746477+00:00 app[web.1]: from
+2025-02-10T14:49:03.746477+00:00 app[web.1]: departments d1_0
+2025-02-10T14:49:03.746477+00:00 app[web.1]: 
+2025-02-10T14:49:04.349475+00:00 heroku[router]: at=info method=GET path="/register" host=humanage-app-1fe93ce442da.herokuapp.com request_id=915524da-c246-4e98-8878-0a1601a35f9c fwd="119.228.142.109" dyno=web.1 connect=0ms service=760ms status=200 bytes=2387 protocol=https
+2025-02-10T14:49:04.780804+00:00 heroku[router]: at=info method=GET path="/js/user_mail.js" host=humanage-app-1fe93ce442da.herokuapp.com request_id=79a390b6-6da8-4173-bd7b-9398b1fa6fdf fwd="119.228.142.109" dyno=web.1 connect=0ms service=56ms status=200 bytes=935 protocol=https
+2025-02-10T14:49:04.775740+00:00 heroku[router]: at=info method=GET path="/js/role_selection.js" host=humanage-app-1fe93ce442da.herokuapp.com request_id=b5c1f9b6-5497-4021-bce9-67537afa738b fwd="119.228.142.109" dyno=web.1 connect=0ms service=64ms status=200 bytes=1497 protocol=https
+2025-02-10T14:49:04.750209+00:00 app[web.1]: 2025-02-10 23:49:04,741 DEBG 'web' stdout output:
+2025-02-10T14:49:04.750235+00:00 app[web.1]: 2025-02-10T23:49:04.712+09:00  INFO 6 --- [Humanage_app] [.0-16291-exec-8] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@3b8e104b, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@6b7ea156, チェーン: org.apache.catalina.core.ApplicationFilterChain@540201eb
+2025-02-10T14:49:04.750236+00:00 app[web.1]: 
+2025-02-10T14:49:04.759781+00:00 app[web.1]: 2025-02-10 23:49:04,759 DEBG 'web' stdout output:
+2025-02-10T14:49:04.759783+00:00 app[web.1]: 2025-02-10T23:49:04.725+09:00  INFO 6 --- [Humanage_app] [0-16291-exec-10] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdoFilterが呼ばれました。リクエスト: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@302c0faf, レスポンス: org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryResponseWrapper@3502e20, チェーン: org.apache.catalina.core.ApplicationFilterChain@11ecec0e
+2025-02-10T14:49:04.759784+00:00 app[web.1]: 
+2025-02-10T14:49:07.459931+00:00 app[web.1]: 2025-02-10 23:49:07,459 DEBG 'pdf-server' stdout output:
+2025-02-10T14:49:07.459945+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:49:07.459946+00:00 app[web.1]: rss: 72400896,
+2025-02-10T14:49:07.459946+00:00 app[web.1]: heapTotal: 18690048,
+2025-02-10T14:49:07.459946+00:00 app[web.1]: heapUsed: 16778288,
+2025-02-10T14:49:07.459946+00:00 app[web.1]: external: 4716492,
+2025-02-10T14:49:07.459947+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:49:07.459947+00:00 app[web.1]: }
+2025-02-10T14:49:07.459947+00:00 app[web.1]: 
+2025-02-10T14:49:07.868473+00:00 app[web.1]: 2025-02-10 23:49:07,868 DEBG 'release' stdout output:
+2025-02-10T14:49:07.868497+00:00 app[web.1]: [DEBUG] メモリ使用状況: {
+2025-02-10T14:49:07.868498+00:00 app[web.1]: rss: 76492800,
+2025-02-10T14:49:07.868498+00:00 app[web.1]: heapTotal: 18427904,
+2025-02-10T14:49:07.868498+00:00 app[web.1]: heapUsed: 16856816,
+2025-02-10T14:49:07.868498+00:00 app[web.1]: external: 4716492,
+2025-02-10T14:49:07.868499+00:00 app[web.1]: arrayBuffers: 54147
+2025-02-10T14:49:07.868499+00:00 app[web.1]: }
+2025-02-10T14:49:07.868499+00:00 app[web.1]: 
+2025-02-10T14:49:20.132667+00:00 heroku[web.1]: State changed from up to down
+2025-02-10T14:49:19.967197+00:00 app[api]: Scaled to web@0:Standard-2X by user nft0722@gmail.com
+2025-02-10T14:49:20.777878+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2025-02-10T14:49:20.829760+00:00 app[web.1]: 2025-02-10 23:49:20,829 DEBG 'release' stdout output:
+2025-02-10T14:49:20.829786+00:00 app[web.1]: [INFO] SIGTERM を受け取りました。 サーバーを閉じています...
+2025-02-10T14:49:20.829786+00:00 app[web.1]: 
+2025-02-10T14:49:20.829790+00:00 app[web.1]: 2025-02-10 23:49:20,829 DEBG 'web' stdout output:
+2025-02-10T14:49:20.829793+00:00 app[web.1]: 2025-02-10T23:49:20.805+09:00 DEBUG 6 --- [Humanage_app] [ionShutdownHook] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2025-02-10T14:49:20.829793+00:00 app[web.1]: 
+2025-02-10T14:49:20.899012+00:00 app[web.1]: 2025-02-10 23:49:20,898 WARN received SIGTERM indicating exit request
+2025-02-10T14:49:20.905341+00:00 app[web.1]: 2025-02-10 23:49:20,905 DEBG killing web (pid 6) with signal SIGTERM
+2025-02-10T14:49:20.915600+00:00 app[web.1]: 2025-02-10 23:49:20,915 INFO waiting for pdf-server, release, web to die
+2025-02-10T14:49:20.915722+00:00 app[web.1]: 2025-02-10 23:49:20,915 DEBG 'pdf-server' stdout output:
+2025-02-10T14:49:20.915722+00:00 app[web.1]: [INFO] SIGTERM を受け取りました。 サーバーを閉じています...
+2025-02-10T14:49:20.915723+00:00 app[web.1]: [INFO] サーバー停止プロセスが開始されました...
+2025-02-10T14:49:20.915723+00:00 app[web.1]: 
+2025-02-10T14:49:20.915764+00:00 app[web.1]: 2025-02-10 23:49:20,915 DEBG 'release' stdout output:
+2025-02-10T14:49:20.915764+00:00 app[web.1]: [INFO] サーバー停止プロセスが開始されました...
+2025-02-10T14:49:20.915765+00:00 app[web.1]: 
+2025-02-10T14:49:20.915825+00:00 app[web.1]: 2025-02-10 23:49:20,915 DEBG 'web' stdout output:
+2025-02-10T14:49:20.915827+00:00 app[web.1]: 2025-02-10T23:49:20.913+09:00  INFO 6 --- [Humanage_app] [ionShutdownHook] j.co.example.controller.LoginController  : [INFO] アプリケーション終了時にリソースを解放します...
+2025-02-10T14:49:20.915829+00:00 app[web.1]: 2025-02-10T23:49:20.915+09:00  INFO 6 --- [Humanage_app] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-10T14:49:20.915829+00:00 app[web.1]: 
+2025-02-10T14:49:20.926782+00:00 app[web.1]: 2025-02-10 23:49:20,926 DEBG fd 10 closed, stopped monitoring <POutputDispatcher at 140180908948752 for <Subprocess at 140180908691856 with name release in state RUNNING> (stdout)>
+2025-02-10T14:49:20.927450+00:00 app[web.1]: 2025-02-10 23:49:20,927 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140180906544208 for <Subprocess at 140180908691856 with name release in state RUNNING> (stderr)>
+2025-02-10T14:49:20.931475+00:00 app[web.1]: 2025-02-10 23:49:20,931 WARN exited: release (terminated by SIGTERM; not expected)
+2025-02-10T14:49:20.932753+00:00 app[web.1]: 2025-02-10 23:49:20,932 DEBG received SIGCHLD indicating a child quit
+2025-02-10T14:49:20.945806+00:00 app[web.1]: 2025-02-10 23:49:20,945 DEBG 'web' stdout output:
+2025-02-10T14:49:20.945810+00:00 app[web.1]: 2025-02-10T23:49:20.920+09:00  INFO 6 --- [Humanage_app] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown initiated...
+2025-02-10T14:49:20.945810+00:00 app[web.1]: 
+2025-02-10T14:49:21.218363+00:00 app[web.1]: 2025-02-10 23:49:21,218 DEBG 'web' stdout output:
+2025-02-10T14:49:21.218373+00:00 app[web.1]: 2025-02-10T23:49:21.217+09:00  INFO 6 --- [Humanage_app] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool - Shutdown completed.
+2025-02-10T14:49:21.218373+00:00 app[web.1]: 
+2025-02-10T14:49:21.221690+00:00 app[web.1]: 2025-02-10 23:49:21,221 DEBG 'web' stdout output:
+2025-02-10T14:49:21.221694+00:00 app[web.1]: 2025-02-10T23:49:21.221+09:00  INFO 6 --- [Humanage_app] [ionShutdownHook] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter.javaのdestroyが呼ばれました。
+2025-02-10T14:49:21.221694+00:00 app[web.1]: 
+2025-02-10T14:49:21.222255+00:00 app[web.1]: 2025-02-10 23:49:21,222 DEBG 'web' stdout output:
+2025-02-10T14:49:21.222256+00:00 app[web.1]: 2025-02-10T23:49:21.221+09:00  INFO 6 --- [Humanage_app] [ionShutdownHook] jp.co.example.filter.LoginFilter         : [INFO] LoginFilter: Destroyed
+2025-02-10T14:49:21.222256+00:00 app[web.1]: 
+2025-02-10T14:49:21.303795+00:00 app[web.1]: 2025-02-10 23:49:21,303 DEBG fd 15 closed, stopped monitoring <POutputDispatcher at 140180922782352 for <Subprocess at 140180908843088 with name web in state STOPPING> (stdout)>
+2025-02-10T14:49:21.303848+00:00 app[web.1]: 2025-02-10 23:49:21,303 DEBG fd 19 closed, stopped monitoring <POutputDispatcher at 140180906544976 for <Subprocess at 140180908843088 with name web in state STOPPING> (stderr)>
+2025-02-10T14:49:22.305569+00:00 app[web.1]: 2025-02-10 23:49:22,305 WARN stopped: web (exit status 143)
+2025-02-10T14:49:22.305624+00:00 app[web.1]: 2025-02-10 23:49:22,305 DEBG received SIGCHLD indicating a child quit
+2025-02-10T14:49:23.306283+00:00 app[web.1]: 2025-02-10 23:49:23,306 DEBG killing pdf-server (pid 4) with signal SIGTERM
+2025-02-10T14:49:23.306663+00:00 app[web.1]: 2025-02-10 23:49:23,306 DEBG 'pdf-server' stdout output:
+2025-02-10T14:49:23.306665+00:00 app[web.1]: [INFO] SIGTERM を受け取りました。 サーバーを閉じています...
+2025-02-10T14:49:23.306665+00:00 app[web.1]: 
+2025-02-10T14:49:23.308379+00:00 app[web.1]: 2025-02-10 23:49:23,308 DEBG 'pdf-server' stdout output:
+2025-02-10T14:49:23.308380+00:00 app[web.1]: [INFO] サーバー停止プロセスが開始されました...
+2025-02-10T14:49:23.308380+00:00 app[web.1]: 
+2025-02-10T14:49:24.309733+00:00 app[web.1]: 2025-02-10 23:49:24,309 INFO waiting for pdf-server to die
+2025-02-10T14:49:24.627243+00:00 app[api]: Detach REDIS (@ref:redis-amorphous-85779) by user nft0722@gmail.com
+2025-02-10T14:49:24.627243+00:00 app[api]: Release v3109 created by user nft0722@gmail.com
+2025-02-10T14:49:27.311813+00:00 app[web.1]: 2025-02-10 23:49:27,311 INFO waiting for pdf-server to die
+2025-02-10T14:49:30.314494+00:00 app[web.1]: 2025-02-10 23:49:30,314 INFO waiting for pdf-server to die
+2025-02-10T14:49:33.316618+00:00 app[web.1]: 2025-02-10 23:49:33,316 WARN killing 'pdf-server' (4) with SIGKILL
+2025-02-10T14:49:33.316661+00:00 app[web.1]: 2025-02-10 23:49:33,316 DEBG killing pdf-server (pid 4) with signal SIGKILL
+2025-02-10T14:49:33.317278+00:00 app[web.1]: 2025-02-10 23:49:33,317 INFO waiting for pdf-server to die
+2025-02-10T14:49:33.324762+00:00 app[web.1]: 2025-02-10 23:49:33,324 DEBG fd 7 closed, stopped monitoring <POutputDispatcher at 140180908693904 for <Subprocess at 140180907422480 with name pdf-server in state STOPPING> (stdout)>
+2025-02-10T14:49:33.324819+00:00 app[web.1]: 2025-02-10 23:49:33,324 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140180908942608 for <Subprocess at 140180907422480 with name pdf-server in state STOPPING> (stderr)>
+2025-02-10T14:49:33.324929+00:00 app[web.1]: 2025-02-10 23:49:33,324 WARN stopped: pdf-server (terminated by SIGKILL)
+2025-02-10T14:49:33.325007+00:00 app[web.1]: 2025-02-10 23:49:33,324 DEBG received SIGCHLD indicating a child quit
+2025-02-10T14:49:34.286753+00:00 heroku[web.1]: Process exited with status 0
+2025-02-10T14:56:06.071701+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=639dc647-a2b9-4ecd-8585-09c8100a8e48 fwd="54.198.55.229" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:06.637054+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=4c4f0152-c478-491c-b1a3-70d08634f9d2 fwd="54.156.251.192" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:08.074871+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=71bf3054-458c-467f-ac3a-ab898316259a fwd="54.198.55.229" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:08.478397+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=f1ab17e4-a115-470a-b934-85bc5ef6e48d fwd="34.235.48.77" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:11.326806+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=83d42736-592b-4132-aa07-81fa3017a7d7 fwd="54.198.55.229" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:11.803228+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/login" host=humanage-app-1fe93ce442da.herokuapp.com request_id=a5d15063-d4f1-4dca-bee5-708415d126d6 fwd="54.198.55.229" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:12.555527+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=b269484b-93c4-466c-83af-6b2e9bf60454 fwd="54.198.55.229" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:16.685769+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=5c7e0a29-d683-4156-bc49-9b605964effa fwd="54.156.251.192" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:17.244564+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/top" host=humanage-app-1fe93ce442da.herokuapp.com request_id=be1138b9-a626-4a3c-b4f0-1914494344d3 fwd="54.156.251.192" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:30.102080+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/salaryDetails" host=humanage-app-1fe93ce442da.herokuapp.com request_id=965392c2-748f-45c1-8ce5-26abd4f475d2 fwd="54.198.55.229" dyno= connect= service= status=503 bytes= protocol=https
+2025-02-10T14:56:42.942392+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=humanage-app-1fe93ce442da.herokuapp.com request_id=5a30a992-a6dc-4d73-b328-d54dc5afccd1 fwd="54.156.251.192" dyno= connect= service= status=503 bytes= protocol=https
